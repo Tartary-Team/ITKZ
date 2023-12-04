@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-айнымалылары-сабақтамалары-мен-литералдары">Python Айнымалылары, Сабақтамалары мен Литералдары</a>
+<ul>
+<li><a href="#python-айнымалылары">Python Айнымалылары</a></li>
+<li><a href="#python-да-мәндерді-айнымаларға-беру">Python-да Мәндерді Айнымаларға Беру</a></li>
+<li><a href="#python-да-айныманың-мәнін-өзгерту">Python-да Айныманың Мәнін Өзгерту</a></li>
+<li><a href="#python-айнымалыларын-аталу-үшін-ережелер">Python Айнымалыларын Аталу үшін Ережелер</a></li>
+<li><a href="#python-сабақтамалары">Python Сабақтамалары</a></li>
+<li><a href="#python-литералдар">Python Литералдар</a></li>
+<li><a href="#python-санды-литералдар">Python Санды Литералдар</a></li>
+<li><a href="#python-логикалық-литералдар">Python Логикалық Литералдар</a></li>
+<li><a href="#python-да-тізбегі-және-таңбалар-литералдары">Python-да Тізбегі және Таңбалар Литералдары</a></li>
+<li><a href="#python-да-арнайы-литерал">Python-да Арнайы Литерал</a></li>
+<li><a href="#литерал-коллекциялар">Литерал Коллекциялар</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-айнымалылары-сабақтамалары-мен-литералдары">Python Айнымалылары, Сабақтамалары мен Литералдары</h1>
+<h2 id="python-айнымалылары">Python Айнымалылары</h2>
+<p>Программалау жасау кезінде айнымалы – бұл деректерді сақтау үшін қолданылатын контейнер (сақтау аймағы). Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token number">10</span>
+</code></pre>
+<p>Мұнда,  number  10 мәнін сақтау үшін пайдаланылатын айнымады атаймыз.</p>
+<h2 id="python-да-мәндерді-айнымаларға-беру">Python-да Мәндерді Айнымаларға Беру</h2>
+<p>Жоғарыдағы мысалдан көріндігі дайындалғанда, мұнда мәнді айнымаларға беру үшін атауыш операторы  <code>=</code>  пайдаланамыз.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># site_name айнымасына мән беру</span>
+site_name <span class="token operator">=</span> <span class="token string">'programiz.pro'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>site_name<span class="token punctuation">)</span>
+
+<span class="token comment"># Шығармашылық: programiz.pro</span>
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  site_name  айнымасына  <code>'programiz.pro'</code>  мәнін бердік. Сонымен қатар, берілген мәнді  site_name  айнымасына бергенімізді шығардык.</p>
+<blockquote>
+<p><strong>Ескерту</strong>: Python <a href="https://en.wikipedia.org/wiki/Type_inference">түрді білдірген</a> тіл, сондықтан сізге айнымалы түрін көмекші операторды анықтаманы ұсынбайды. Ол автоматты түрде біледі,  <code>programiz.pro</code>  стринг деп анықталатын жасау үшін  <code>site_name</code>  айнымасын стринг түрінде айнымалайды.</p>
+</blockquote>
+<h2 id="python-да-айныманың-мәнін-өзгерту">Python-да Айныманың Мәнін Өзгерту</h2>
+<pre class=" language-python"><code class="prism  language-python">site_name <span class="token operator">=</span> <span class="token string">'io.pro'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>site_name<span class="token punctuation">)</span>
+
+<span class="token comment"># site_name айнымасына жаңа мән беру</span>
+site_name <span class="token operator">=</span> <span class="token string">'apple.com'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>site_name<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<p><a href="http://io.pro">io.pro</a><br>
+<a href="http://apple.com">apple.com</a></p>
+<p>Мұнда,  <code>site_name</code>  айнымасының мәнін  <code>'io.pro'</code>  дан  <code>'apple.com'</code>  ге өзгерткіміз.</p>
+<h3 id="мысал-бірнеше-мәнді-бірнеше-айнымаларға-беру">Мысал: Бірнеше мәнді бірнеше айнымаларға беру</h3>
+<pre class=" language-python"><code class="prism  language-python">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3.2</span><span class="token punctuation">,</span> <span class="token string">'Сәлем'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment"># 5 басылады</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment"># 3.2 басылады</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>  <span class="token comment"># Сәлем басылады</span>
+</code></pre>
+<p>Егер біз бір уақытта бірнеше айнымаларға екінші бір мән бергіміз келсе, мыналарды пайдалана аламыз:</p>
+<pre class=" language-python"><code class="prism  language-python">site1 <span class="token operator">=</span> site2  <span class="token operator">=</span> <span class="token string">'prog.com'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>site1<span class="token punctuation">)</span>  <span class="token comment"># prog.com басылады</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>site2<span class="token punctuation">)</span>  <span class="token comment"># prog.com басылады</span>
+</code></pre>
+<p>Мұнда, біз  <code>site1</code>  мен  <code>site2</code>  айнымаларына тең бір сізбен мән  <code>'prog.com'</code>  бердік.</p>
+<h2 id="python-айнымалыларын-аталу-үшін-ережелер">Python Айнымалыларын Аталу үшін Ережелер</h2>
+<ul>
+<li>Сабақтама мен айнымалы аталуының аты аз әріптермен ( <strong>a</strong>-<strong>z</strong> ) не көбі арқылы, немесе көшбасшылармен ( <strong>A</strong>-<strong>Z</strong> ), немесе сандармен ( <strong>0</strong>-<strong>9</strong> ), немесе астынсыздан  <code>(**_**)</code>  тұрыптарымен болуы тиіс. Мысалы:</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python">snake_case
+MACRO_CASE
+camelCase
+CapWords
+</code></pre>
+<ul>
+<li>
+<p>Мағанын жасауы тиіс аталуымыз. Мысалы,  қатын  күншіл  аталуы  <code>v</code>  дан  бетер.</p>
+</li>
+<li>
+<p>Екі сөзден тұрыпты аталу үшін оларды біріктіру үшін астынсыздан  <code>(</code>_<code>)</code>  пайдаланымыз. Мысалы:</p>
+</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python">my_name
+current_salary
+</code></pre>
+<ul>
+<li>Python  көшбасшыл. Сондықтан <code>num</code> мен <code>Num</code> - бұл ерекше айнымалылар. Мысалы,</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python">num <span class="token operator">=</span> <span class="token number">5</span> 
+Num <span class="token operator">=</span> <span class="token number">55</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token comment"># 5</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>Num<span class="token punctuation">)</span> <span class="token comment"># 55</span>
+</code></pre>
+<ul>
+<li>Қалпына келтірілген  <a href="https://www.programiz.com/python-programming/keywords-identifier">кілт сөздерді</a>  (if, True, class жатамасын) айнымалы аты болмасы.</li>
+</ul>
+<h2 id="python-сабақтамалары">Python Сабақтамалары</h2>
+<p>Сабақтама - бұл өзгерту мүмкіндігі жоқ бір түрдегі айнымалы.</p>
+<p>Python-да сабақтамалар өзгерту, функцияларды,  <a href="https://www.programiz.com/python-programming/modules">модульдерді</a>  (переменные, функции т.б.) орналасатын, бастапқы файлға импортталатын файлдарда болады.</p>
+<p>Біріктіріп, себепті бізді өзара файлда сабақтамаларды қалыптау және оларды бастапқы файлда қалдырамыз.</p>
+<p><strong>`constant.py`</strong> файлын құрыңыз:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># сабақтамаларды анықтау </span>
+PI <span class="token operator">=</span> <span class="token number">3.14</span>
+GRAVITY <span class="token operator">=</span> <span class="token number">9.8</span>
+</code></pre>
+<p><strong>`main.py`</strong> файлын құрыңыз:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># біз құрылған constant файлын импорттау</span>
+<span class="token keyword">import</span> constant
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>constant<span class="token punctuation">.</span>PI<span class="token punctuation">)</span> <span class="token comment"># 3.14 басылады</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>constant<span class="token punctuation">.</span>GRAVITY<span class="token punctuation">)</span> <span class="token comment"># 9.8 басылады</span>
+</code></pre>
+<p>Жоғарыда көрсетілген мысалда, біз  <strong><a href="http://constant.py">constant.py</a></strong>  модуль файлын құрдымыз. Сондай-ақ, біз  PI  және  GRAVITY  сабақтамаларына сабақтама мәнін бердік.</p>
+<p>Содан кейін, біз <strong><a href="http://main.py">main.py</a></strong> файлын құрып, <code>constant</code> модулін импорттадык. Сонымен қатар, біз сабақтама мәнін шығардык.</p>
+<blockquote>
+<p><strong>Ескерту</strong>: Жасырындай, Python-да біз сабақтамаларды пайдаланбаймыз. Оларды барлық көшбасшылардан айырап анықтау бір дайындыққа ұшырады, бірақ, ол мәнін өзара жасаушылықты тоқтаушы қылмайды.</p>
+</blockquote>
+<h2 id="python-литералдар">Python Литералдар</h2>
+<p>Литералдар - бұл программада берілген мәндерді көрсетулер. Олар сандар, тақырыптар немесе тізбек мәндер болуы мүмкін. Мысалы,  <code>'Сәлем, Әлем!'</code>,  <code>12</code>,  <code>23.0</code>,  <code>'С'</code>, т.б.</p>
+<p>Литералдар көбірек айнымалылар немесе сабақтамаларға мән беру үшін пайдаланылады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">site_name <span class="token operator">=</span> <span class="token string">'prog.com'</span>
+</code></pre>
+<p>Жоғарыда көрсетілген выраженияда  <code>site_name</code>  - бұл айнымалы,  <code>'prog.com'</code>  - бұл литерал.</p>
+<h2 id="python-санды-литералдар">Python Санды Литералдар</h2>
+<p>Санды литералдар өзгермейтін (тұратын) екендігін айтар. Санды литералдар 3 роды нөмірлік түрді бола алатын 3 түрлі:  <code>Integer</code>,  <code>Float</code>, және  <code>Complex</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th>Түр</th>
+<th>Мысал</th>
+<th>Ескертпе</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ондік</td>
+<td>5, 10, -68</td>
+<td>Қалыпты сандар.</td>
+</tr>
+<tr>
+<td>Бинарлық</td>
+<td>0b101, 0b11</td>
+<td>0b басталатын.</td>
+</tr>
+<tr>
+<td>Үштік</td>
+<td>0o13</td>
+<td>0o басталатын.</td>
+</tr>
+<tr>
+<td>Он шестнадцатеричный</td>
+<td>0x13</td>
+<td>0x басталатын.</td>
+</tr>
+<tr>
+<td>Көлденеңді-нүктедегі Литерал</td>
+<td>10.5, 3.14</td>
+<td>Қалыпты нүктедегілі сан.</td>
+</tr>
+<tr>
+<td>Комплекс Литерал</td>
+<td>6 + 9j</td>
+<td><code>a + bj</code>  формасында сан, мында <code>a</code> - есепті және <code>b</code> - көмекті бөлімін алмайды.</td>
+</tr>
+</tbody>
+</table><h2 id="python-логикалық-литералдар">Python Логикалық Литералдар</h2>
+<p>Екі логикалық литерал бар:  <code>True</code>  және  <code>False</code>.</p>
+<p>Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">result1 <span class="token operator">=</span> <span class="token boolean">True</span>  
+</code></pre>
+<p>Мұнда,  <code>True</code>  логикалық литералын  <code>result1</code>  айнымасына бердік.</p>
+<h2 id="python-да-тізбегі-және-таңбалар-литералдары">Python-да Тізбегі және Таңбалар Литералдары</h2>
+<p>Таңбалар литералдары – бұл аударманы бар қатарларда орналасқан Юникод таңбалары. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">some_character <span class="token operator">=</span> <span class="token string">'С'</span>
+</code></pre>
+<p>Мұнда,  <code>С</code>  таңбалар литералы  some_character  айнымасына берілген.</p>
+<p>Ойша, Тізбе литералдары – таңбалардың қайтарайын көмекшілігінде топталған тізбелер.</p>
+<p>Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">some_string <span class="token operator">=</span> <span class="token string">'Python жақсы'</span>
+</code></pre>
+<p>Мұнда,  ‘Python жақсы’  – бұл тізбелер литералы  <code>some_string</code>  айнымасына берілген.</p>
+<h2 id="python-да-арнайы-литерал">Python-да Арнайы Литерал</h2>
+<p>Python-да  <code>None</code>  деген бір арнайы литерал бар. Біз оны бос айнымалыды анықтау үшін пайдаланамыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">value <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+
+<span class="token comment"># Шығармашылық: None</span>
+</code></pre>
+<p>Мұнда,  <code>None</code>  шығармашылықтарының  <code>value</code>  айнымасына берілген мәні жоқ екені себепті, бізге  <code>None</code>  шығады.</p>
+<h2 id="литерал-коллекциялар">Литерал Коллекциялар</h2>
+<p>Төрт түрлі литерал коллекциялары бар: Тізбе литералдар, Көрсеткі литералдар, Сөздік литералдар және Жиысты литералдар.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># тізбе литералы</span>
+fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"алма"</span><span class="token punctuation">,</span> <span class="token string">"манго"</span><span class="token punctuation">,</span> <span class="token string">"апельсин"</span><span class="token punctuation">]</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+<span class="token comment"># көрсеткі литералы</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>
+
+<span class="token comment"># сөздік литералы</span>
+alphabets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'a'</span><span class="token punctuation">:</span><span class="token string">'алма'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span><span class="token string">'қап'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">:</span><span class="token string">'мысық'</span><span class="token punctuation">}</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>alphabets<span class="token punctuation">)</span>
+
+<span class="token comment"># жиысты литералы</span>
+vowels <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span> <span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">}</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>vowels<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>['алма', 'манго', 'апельсин']
+(1, 2, 3)
+{'a': 'алма', 'b': 'қап', 'c': 'мысық'}
+{'a', 'e', 'i', 'o', 'u'}
+</code></pre>
+<p>Жоғарыда көрсетілген мысалда, біз  алмалардың тізбесін, нөмірлердің көрсеткісін,  беттермен сөздіктердің алфавитін жасаған бір жиыстын жасағанмыз және  үгіттердің жиыстын жасағанмыз.</p>
+<p>Литерал коллекциялар туралы көбірек ақпарат алу үшін <a href="https://www.programiz.com/python-programming/variables-datatypes">Python Деректер Түрлері</a> бетіне көз жетіңіз.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>

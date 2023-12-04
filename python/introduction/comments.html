@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-түсініктері-comments">Python Түсініктері (Comments)</a>
+<ul>
+<li><a href="#python-да-түсініктемелердің-түрлері">Python-да Түсініктемелердің Түрлері</a></li>
+<li><a href="#python-да-бір-қатарды-түсініктеме">Python-да бір қатарды түсініктеме</a></li>
+<li><a href="#python-да-көп-қатарды-түсініктеме">Python-да көп қатарды түсініктеме</a></li>
+<li><a href="#python-түсініктеме-пайдалану">Python Түсініктеме Пайдалану</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-түсініктері-comments">Python Түсініктері (Comments)</h1>
+<p>Компьютерлік программалау жасаушылардың кодты түсініктеп қалуы үшін пайдаланатын назар аудармалар.</p>
+<p>Түсініктеме интерпретатор толықтай өткізіп тұрады. Олар теңшелген программалаушылар үшін арналған. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># екі айнымалыны анықтау және инициализациялау</span>
+num1 <span class="token operator">=</span> <span class="token number">6</span>
+num2 <span class="token operator">=</span> <span class="token number">9</span>
+
+<span class="token comment"># шығару результатын</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Мұнда шығару'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда біз келесі түсініктерді пайдаланамыз,</p>
+<ul>
+<li><code>екі айнымалыны анықтау және инициализациялау</code></li>
+<li><code>шығару результатын</code></li>
+</ul>
+<h2 id="python-да-түсініктемелердің-түрлері">Python-да Түсініктемелердің Түрлері</h2>
+<p>Python тілінде екі түрлі түсініктемелер бар:</p>
+<ul>
+<li>жалпы жол түсініктемесі</li>
+<li>көп жол түсініктемесі</li>
+</ul>
+<h2 id="python-да-бір-қатарды-түсініктеме">Python-да бір қатарды түсініктеме</h2>
+<p>Бір қатарды түсініктеме бір жолда басталып, оны тауып өтеді. Бір қатарды түсініктеме жазу үшін  <code>#</code>  символын пайдаланамыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># өрісті жасау</span>
+аты <span class="token operator">=</span> <span class="token string">'Ерік Картман'</span>
+
+<span class="token comment"># мәнін басу</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>аты<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<p><code>Ерік Картман</code></p>
+<p>Мұнда біз екі бір қатарды түсініктеме жасадык:</p>
+<ol>
+<li><code># өрісті жасау</code></li>
+<li><code># мәнін басу</code></li>
+</ol>
+<p>Бір қатарды түсініктемені кодпен бірге қолдану қатты болады.</p>
+<pre><code>аты = 'Ерік Картман' # аты - тізбек
+</code></pre>
+<p>Мұнда,  <code>#</code>  алдынгі код орындалады және  <code>#</code>  кейінгі код интерпретатормен жұмыс істемейді.</p>
+<h2 id="python-да-көп-қатарды-түсініктеме">Python-да көп қатарды түсініктеме</h2>
+<p>Python көп қатарды түсініктеме жазу үшін аралық әдісті ұсынбайды. Бірақ, бұл мәселені шешу үшін басқа жолдар бар.</p>
+<p>Бір қатарды түсініктеме жазу үшін көмекші  <code>#</code>  символын бірнеше қатардың басына қойа аламыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># Бұл ұзын түсініктеме</span>
+<span class="token comment"># және ол кеңейеді</span>
+<span class="token comment"># бірнеше қатарға</span>
+</code></pre>
+<p>Мұнда, көкіректі көрсетілген көмекші қатар бірнеше қатарды түсініктеме ретінде қабылданады және оларды интерпретатор жұмыс істемейді.</p>
+<p>Басқа бір жол - бұл  <code>'''</code>  не  <code>"""</code>  көмекшілерін пайдалану.</p>
+<p>Бұл көмекшілер өзге өлшемді қатарлар үшін пайдаланылады. Бірақ, оны өзге айнымалы немесе функцияға берілмесе, оларды түсініктеме ретінде пайдалана аламыз.</p>
+<p>Интерпретатор оны өзге айнымалы немесе функцияға берілмеген жолдарды ұмытады.</p>
+<p>Мысалды көрейік,</p>
+<pre><code>''' Бұл те
+салқын түсініктеме
+бірнеше қатарға '''
+</code></pre>
+<p>Мұнда, көмекші ұзақтыру жолымен өзге айнымалыға берілмегені үшін интерпретатор оны ұмытады. Техникалық ретте бұл көп қатарды түсініктеме емес, бірақ оны онымдарды түсініктеме ретінде пайдалана аламыз.</p>
+<h2 id="python-түсініктеме-пайдалану">Python Түсініктеме Пайдалану</h2>
+<p><strong>1. Кодты Түсініктеме Жасау</strong></p>
+<p>Егер біз кодымызда түсініктеме жазсақ, келесі референция үшін бұл тиімді болады.</p>
+<p>Сонымен қатар, басқа дамытударга кодты түсінуі өте қарапайым болады.</p>
+<p><strong>2. Түсініктеме Пайдалану Бойынша Дебаг Жасау</strong></p>
+<p>Программа жүргізілген кезде қате алса, біз қате шығатын кодты алауыздырау көмекшісі ретінде түсініктеме жасай аламыз, онда оны алауыздыраудан тыс қылмайтындарымыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Python'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print('Error Line )</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Django'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда,  <code>print('Error Line)</code>  қатесін жасау кезінде қате шығатын себеппені, біз оны түсініктеме ретінде өзгерту аламыз. Қазір программа қатесіз жүргізіледі.</p>
+<p>Түсініктемелерді дебаг құралы ретінде қалыпты пайдалану көрсеткіші.</p>
+<blockquote>
+<p><strong>Ескерту</strong>: Әуескертпеуші кодты айтармасқа жатпай болмау үшін көмекшілерді не боп тауып өткізу ретінде қолданыңыздар. Түсініктемелерді несіз несіге өздігіні неге жасадымызды айтармасқа пайдалану керек.</p>
+</blockquote>
+
+    </div>
+  </div>
+</body>
+
+</html>
