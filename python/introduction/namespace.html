@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-неймспейс-және-қамтамасыздандыру">Python Неймспейс және Қамтамасыздандыру</a>
+<ul>
+<li><a href="#python-неймспейстың-түрлері">Python Неймспейстың түрлері</a></li>
+<li><a href="#python-атауларның-көрсету-аймағы">Python Атауларның Көрсету Аймағы</a></li>
+<li><a href="#мысал-1-python-да-кезең-мен-неймспейс">Мысал 1: Python-да кезең мен неймспейс</a></li>
+<li><a href="#мысал-2-python-да-global-кілтіні-қолдау-қолдау-ету">Мысал 2: Python-да global Кілтіні қолдау қолдау ету</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-неймспейс-және-қамтамасыздандыру">Python Неймспейс және Қамтамасыздандыру</h1>
+<p>Ондай деп айту болса, неймспейс - бұл атаулардың топтамасы.</p>
+<p>Python-да біз неймспейсті біздің барлық атауларымызды сәйкестендірілген нысандарға салу деп табамыз.</p>
+<p>Ол программада қалыптасқан бағандар мен басқа нысандарды сақтау үшін пайдаланылады және оларды мәселені белгілі атаумен байланыстыруды қамтамасыздандырудың көмекші болады.</p>
+<p>Бұл бізге кодтың сіздік бөлімдерінде екіге тең атауларды немесе нысандарды пайдалану мүмкіндігін береді, сондай-ауырымсыздық пайда бермейді немесе көмек көрсетмейді.</p>
+<h2 id="python-неймспейстың-түрлері">Python Неймспейстың түрлері</h2>
+<p>Python интерпретаторын іске қосатын уақытынан басталадығанда  <strong>built-in атаулардың</strong>  барлық мәйіті неймспейс жасалады және интерпретатор жұмыс істеушідей дейді.</p>
+<p>Бұлып табамыз, мас үшін  <code>id()</code>,  <code>print()</code>  т.б. осы барлық жағдайда бізге қол жететін өзгертілмеген функциялар әр дайын жатамасына бар.</p>
+<p>Бұл кезде екіге тең атаулардың аты бірдей модульдерде болуы мүмкін емес, себебі олардың арасында тауарды теңізбейді.</p>
+<p>Модульдерде көптеген функциялар мен класстар болуы мүмкін.  <strong>Жергілікті</strong>  неймспейс функция шақырылғанда жасалады, одан кейін оныда белгілі атаулар бар.</p>
+<p>Сыртқылы анықтау үшін келесі диаграмма көмек көрсете алады.</p>
+<p><img src="python-namespace.png" alt=""></p>
+<h2 id="python-атауларның-көрсету-аймағы">Python Атауларның Көрсету Аймағы</h2>
+<p>Өзге бірнеше арнайы неймспейс дайын бар болатын үшін біз кез-келген бөлімнен оларды толық алу мүмкін болмаса да, күшініштік мәселе шығар.</p>
+<p>Аймақ — бұл кез келген жатамасыз басқа кез келген атауларды анықтамасыз дайын қолжетімді боларға болады.</p>
+<p>Мүмкін болатын кезде кем дегенде үш қабатты неймспейс бар.</p>
+<ol>
+<li>Ағымдағы функцияның аймағы, оның ішінде жергілікті атаулар бар</li>
+<li>Модульдің аймағы, оның ішінде глобалды атаулар бар</li>
+<li>Ең жаттығу аймақ, оның ішінде есептелген атаулар бар</li>
+</ol>
+<p>Функция ішінде сілтеме жасалған кезде атау оның ішінде локалды неймспейсінде, сонан кейін глобалды неймспейсінде және соңында қолжетімді неймспейсінде іздесіледі.</p>
+<p>Егер бірінші функция ішінде басқа функция болса, жергіліктік неймспейсінің ішінде жаңа аймақ қосылады.</p>
+<h2 id="мысал-1-python-да-кезең-мен-неймспейс">Мысал 1: Python-да кезең мен неймспейс</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># global_var жалпы неймспейсте бар</span>
+global_var <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">def</span> <span class="token function">outer_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#  outer_var мысалды неймспейсте бар </span>
+    outer_var <span class="token operator">=</span> <span class="token number">20</span>
+
+    <span class="token keyword">def</span> <span class="token function">inner_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#  inner_var тереңген мысалды неймспейсте бар </span>
+        inner_var <span class="token operator">=</span> <span class="token number">30</span>
+
+        <span class="token keyword">print</span><span class="token punctuation">(</span>inner_var<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span>outer_var<span class="token punctuation">)</span>
+
+    inner_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># жалпы атаумен мәнін басып шығару</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>global_var<span class="token punctuation">)</span>
+
+<span class="token comment"># шығару функциясын шақыру және локал мен тереңген локалды атауларды шығару</span>
+outer_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>10
+20
+30
+</code></pre>
+<p>Өмірлік мысалда үш ажайы неймспейс бар: жалпы неймспейс, мысалды функциянын ішінде жергілікті неймспейс және мысалды функциянын ішінде жергілікті неймспейс.</p>
+<p>Мысалдар:</p>
+<ul>
+<li><code>global_var</code> - мысалды неймспейсте бар жатамасы  <strong>10</strong></li>
+<li><code>outer_val</code> - мысалды  <code>outer_function()</code>  функциясының локал неймспейсінде бар жатамасы  <strong>20</strong></li>
+<li><code>inner_val</code> - мысалды  <code>inner_function()</code>  функциясының тереңген локал неймспейсінде бар жатамасы  <strong>30</strong></li>
+</ul>
+<p>Код орындалған уақытта  <code>global_var</code>  жалпы атаудан алдын, локал атау:  <code>outer_var</code>  және  <code>inner_var</code>  мысалды функциялар шақырылғанда шығарылады.</p>
+<h2 id="мысал-2-python-да-global-кілтіні-қолдау-қолдау-ету">Мысал 2: Python-да global Кілтіні қолдау қолдау ету</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># жалпы атау менен танымалы атау</span>
+global_var <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">def</span> <span class="token function">my_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># локалды атау танымалды</span>
+    local_var <span class="token operator">=</span> <span class="token number">20</span>
+
+    <span class="token comment"># жалпы атау мәнін өзгерту</span>
+    <span class="token keyword">global</span> global_var
+    global_var <span class="token operator">=</span> <span class="token number">30</span>
+
+<span class="token comment"># жалпы атау мәнін шығару</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>global_var<span class="token punctuation">)</span>
+
+<span class="token comment"># функцияны шақыру және жалпы атау мәнін өзгерту</span>
+my_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># өзгертілген жалпы атау мәнін шығару</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>global_var<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>10
+30
+</code></pre>
+<p>Мысалда функция шақырыладыда,  <code>global</code>  кілтісін қолдану арқылы  global_var  - ды жалпы атау деп айту үшін  30  мәніне өзгертуге көмек көрсетілген.</p>
+<p>Сондықтан код орындалған уақытта  <code>global_var</code>  біріншінші жылжымасымен  10  мәнімен шығарылады, содан кейін функция шақырылады және функция ішінен жалпы атау мәнін  30  мәніне өзгертіледі.</p>
+<p>Және соңғы соңында  <code>global_var</code> -дің өзгертілген мәні қайтадан шығарылады.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
