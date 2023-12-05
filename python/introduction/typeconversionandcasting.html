@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-түрді-ауыстыру">Python Түрді Ауыстыру</a>
+<ul>
+<li><a href="#python-күйге-кеткен-түр-ауыстыру">Python Күйге кеткен Түр Ауыстыру</a></li>
+<li><a href="#мысал-1-бүтін-санды-бүтіндеуге-ауыстыру">Мысал 1: Бүтін санды бүтіндеуге ауыстыру</a></li>
+<li><a href="#эксплицитті-түрді-ауыстыру">Эксплицитті Түрді Ауыстыру</a></li>
+<li><a href="#мысал-2-стринг-мен-бүтін-санның-қосылуы">Мысал 2: Стринг мен бүтін санның қосылуы</a></li>
+<li><a href="#ескерту-көлемдері">Ескерту Көлемдері</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-түрді-ауыстыру">Python Түрді Ауыстыру</h1>
+<p>Программалау жасаушылықта түрді ауыстыру - бұл бір түрден басқа түрге деректерді ауыстыру процесідір. Мысалы: <code>int</code> деректеріні  <code>str</code>-ге ауыстыру.</p>
+<p>Python программалау тілінде екі түрді түр ауыстыру бар.</p>
+<ul>
+<li>Күйге кеткен Ауыстыру - автоматты түр ауыстыру</li>
+<li>Мысалды Ауыстыру - қолмен жасалған түр ауыстыру</li>
+</ul>
+<h2 id="python-күйге-кеткен-түр-ауыстыру">Python Күйге кеткен Түр Ауыстыру</h2>
+<p>Кейбір ситуацияларда Python автоматты түрді басқа түрге ауыстырады. Бұл күйге кеткен түр ауыстыру деп аталады.</p>
+<h2 id="мысал-1-бүтін-санды-бүтіндеуге-ауыстыру">Мысал 1: Бүтін санды бүтіндеуге ауыстыру</h2>
+<p>Python кішірек деректер түрін (бүтін сан) көп өлшемді түрге (ондай сан) ауыстырған жағдайды көрейік.</p>
+<pre class=" language-python"><code class="prism  language-python">integer_number <span class="token operator">=</span> <span class="token number">123</span>
+float_number <span class="token operator">=</span> <span class="token number">1.23</span>
+
+new_number <span class="token operator">=</span> integer_number <span class="token operator">+</span> float_number
+
+<span class="token comment"># жаңа мән мен алушарлық деректер түрін көрсету</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Мән:"</span><span class="token punctuation">,</span> new_number<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Деректер Түрі:"</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>new_number<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre><code>Мән: 124.23
+Деректер Түрі: &lt;class 'float'&gt;
+</code></pre>
+<p>Жоғарыдағы мысалда, біз екі атаулы  <code>integer_number</code>  және  <code>float_number</code>  өрістерін  <code>int</code>  және  <code>float</code>  түрлерінде соответственно жасадык.</p>
+<p>Содан кейін бұл екі атаулыны қосып, нәтижесін  <code>new_number</code>  өрісіне сақтадык.</p>
+<p>Мынау  <code>new_number</code>  мәні  <strong>124.23</strong>  және деректер түрі  <code>float</code> .</p>
+<p>Себебі Python өзі деректер қайыруын жасау үшін кішірек деректер түрлерін үлкен деректер түрлеріне өзгертуді көрсетеді.</p>
+<blockquote>
+<p><strong>Ескерту:</strong><br>
+-   Қосылмаларды көру үшін  <code>TypeError</code> аламыз, мысалы,  <code>'12' + 23</code>   <code>str</code> және  <code>int</code> -ді қосу көрсетіп жатамасақ болады. Python кейіпкерігі болмайды дегенде Implicit Conversion қолданбайды.<br>
+-   Python-да бұл түрдегі жағдайларға шешім бар, сондай-ақ Explicit Conversion деп аталады.</p>
+</blockquote>
+<h2 id="эксплицитті-түрді-ауыстыру">Эксплицитті Түрді Ауыстыру</h2>
+<p>Эксплицитті түрді ауыстыруда пайдаланушы объекттінің деректер түрін қажетті деректер түріне ауыстырады.</p>
+<p>Мынау, <code>int()</code>, <code>float()</code>, <code>str()</code> т.б.,  түрлеріндегі орнатылған функцияларды қолданамыз, эксплицитті түрді ауыстыруды орындау үшін.</p>
+<p>Бұл түрді ауыстыруды өз атынан типтасу деп атайды, себебі пайдаланушы объекттінің деректер түрін (типін) ауыстырады.</p>
+<h2 id="мысал-2-стринг-мен-бүтін-санның-қосылуы">Мысал 2: Стринг мен бүтін санның қосылуы</h2>
+<pre class=" language-python"><code class="prism  language-python">num_string <span class="token operator">=</span> <span class="token string">'12'</span>
+num_integer <span class="token operator">=</span> <span class="token number">23</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Type Casting бұрын num_string мәнінің деректер түрі:"</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token punctuation">(</span>num_string<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># эксплицитті түрді ауыстыру</span>
+num_string <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>num_string<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Type Casting кейін num_string мәнінің деректер түрі:"</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token punctuation">(</span>num_string<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+num_sum <span class="token operator">=</span> num_integer <span class="token operator">+</span> num_string
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Жалпы: "</span><span class="token punctuation">,</span>num_sum<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"num_sum мәнінің деректер түрі:"</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token punctuation">(</span>num_sum<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre><code>Type Casting бұрын num_string мәнінің деректер түрі: &lt;class 'str'&gt;
+Type Casting кейін num_string мәнінің деректер түрі: &lt;class 'int'&gt;
+Жалпы: 35
+num_sum мәнінің деректер түрі: &lt;class 'int'&gt;
+</code></pre>
+<p>Жоғарыдағы мысалда, біз екі атаулы  <code>num_string</code>  және  <code>num_integer</code>  өрістерін соответственно  <code>str</code>  және  <code>int</code>  түрлерінде жасадык. Кодты қайда көретіндігімізді көздегеніміз,</p>
+<pre class=" language-python"><code class="prism  language-python">num_string <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>num_string<span class="token punctuation">)</span>
+</code></pre>
+<p>Мынау,  <code>num_string</code> -ді бүтін сан түріне эксплицитті түрде ауыстыру үшін  <code>int()</code>  пайдаландық.</p>
+<p><code>num_string</code> -ді бүтін сан мәніне өзгерткен кейін Python екі атаулыны қоса алады.</p>
+<p>Сонымен, бізге  <code>num_sum</code>  мәні  <strong>35</strong>  және деректер түрі  <code>int</code>  көрінгендігін аламыз.</p>
+<h2 id="ескерту-көлемдері">Ескерту Көлемдері</h2>
+<ol>
+<li>Түрді Ауыстыру - объекттің бір деректер түрінен басқа деректер түріне ауыстыру.</li>
+<li>Күйге кеткен Түрді Ауыстыру Python интерпретаторы автоматты түрде орындайды.</li>
+<li>Python күйге кеткен түр ауыстыруда деректерді асырайтындықпен күйіп кетеді.</li>
+<li>Эксплицитті Түр Ауыстыру өз атынан Типтасудан деп аталады, пайдаланушы орнатылған функцияларды қолдана отырып объекттің деректер түрлерін өзгертеді.</li>
+<li>Типтасудан дегенде деректерді асырайтындық болуы мүмкін, себебі біз объектті белгілі деректер түріне түрлендіреміз.</li>
+</ol>
+
+    </div>
+  </div>
+</body>
+
+</html>

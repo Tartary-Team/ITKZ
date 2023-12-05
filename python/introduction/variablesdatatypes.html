@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-деректер-түрлері">Python Деректер Түрлері</a>
+<ul>
+<li><a href="#python-деректер-түрлері-1">Python Деректер Түрлері</a></li>
+<li><a href="#python-сан-деректер-түрі">Python Сан Деректер Түрі</a></li>
+<li><a href="#python-тізім-деректер-түрі">Python Тізім Деректер Түрі</a></li>
+<li><a href="#python-tuple-деректер-түрі">Python Tuple Деректер Түрі</a></li>
+<li><a href="#python-строка-деректер-түрі">Python Строка Деректер Түрі</a></li>
+<li><a href="#python-мөлшер-деректер-түрі">Python Мөлшер Деректер Түрі</a></li>
+<li><a href="#python-сөздік-деректер-түрі">Python Сөздік Деректер Түрі</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-деректер-түрлері">Python Деректер Түрлері</h1>
+<p>Компьютердік программалау арқылы деректер түрлері өрісте сақталатын деректердін түрін көрсетеді. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">num <span class="token operator">=</span> <span class="token number">24</span>
+</code></pre>
+<p>Мұнда, <strong>24</strong> (бүтін санды) <code>num</code> атаулы переменге берілген. Сондықтан, <code>num</code> переменгінің деректер түрі <code>int</code> класына тиесілі.</p>
+<h2 id="python-деректер-түрлері-1">Python Деректер Түрлері</h2>
+
+<table>
+<thead>
+<tr>
+<th>Деректер Түрлері</th>
+<th>Класстар</th>
+<th>Сипаттама</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сан</td>
+<td>int, float, complex</td>
+<td>сан бойынша мәндерді сақтайды</td>
+</tr>
+<tr>
+<td>Строка</td>
+<td>str</td>
+<td>белгілердің последовательлігін сақтайды</td>
+</tr>
+<tr>
+<td>Последовательность</td>
+<td>list, tuple, range</td>
+<td>элементтердің тізімін сақтайды</td>
+</tr>
+<tr>
+<td>Мэппинг</td>
+<td>dict</td>
+<td>деректерді кілт-мәні формасында сақтайды</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>bool</td>
+<td>тек <code>True</code> не <code>False</code> мәндерін сақтайды</td>
+</tr>
+<tr>
+<td>Мөлшер</td>
+<td>set, frozenset</td>
+<td>уникалды элементтердің тізімін сақтайды</td>
+</tr>
+</tbody>
+</table><p>Себебі Python программалау жасауында барлығы объект болатын сияқты, деректер түрлері шешімдер мен өрістердің (объект) класстары.</p>
+<h2 id="python-сан-деректер-түрі">Python Сан Деректер Түрі</h2>
+<p>Python программалау жасауында санның деректер түрі сан бойынша мәнді сақтау үшін пайдаланылады.</p>
+<p>Бүтін сандар, жатты сан және комплекс сандар <a href="https://www.programiz.com/python-programming/numbers">Python сандары</a> категориясында орын алады. Оларды Python-да <code>int</code>, <code>float</code> және <code>complex</code> класстары деп атайды.</p>
+<ul>
+<li><code>int</code> - шектелмеген көлемді бүтін санды сақтайды.</li>
+<li><code>float</code> - қандай болғанда бағанда болатын децимал нүктелерді сақтайды және ол  <strong>15</strong> децимал басқарушылығы бар.</li>
+<li><code>complex</code> - комплекс санды сақтайды.</li>
+</ul>
+<p>Бір ауыстырма ретінде бір өріс немесе мәні күйге кеткен классын білу үшін <code>type()</code> функциясын пайдалана аламыз.</p>
+<p>Мысалдарды көрейік,</p>
+<pre class=" language-python"><code class="prism  language-python">num1 <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">'тыпы'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+num2 <span class="token operator">=</span> <span class="token number">2.0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token string">'тыпы'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+num3 <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">+</span><span class="token number">2j</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num3<span class="token punctuation">,</span> <span class="token string">'тыпы'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre><code>5 - бүтін түрі &lt;class 'int'&gt;
+2.0 - оралған түрі &lt;class 'float'&gt;
+(1+2j) - комплекс түрі &lt;class 'complex'&gt;
+</code></pre>
+<p>Қалай болса, біз <strong>5</strong>, <strong>5.0</strong> және <code>1+2j</code> мәндері бар 3 атаулы өрістерді құрдық.</p>
+<p>Сондықтан,</p>
+<ul>
+<li><strong>5</strong> - бүтін мән болып, <code>type()</code>  num1 переменгінің класын <strong>int</strong> ретінде қайтарады, мынасы  <code>&lt;class 'int'&gt;</code></li>
+<li><strong>2.0</strong> - оралған мән болып, <code>type()</code>  num2 переменгінің класын <strong>float</strong> ретінде қайтарады, мынасы  <code>&lt;class 'float'&gt;</code></li>
+<li><code>1 + 2j</code> - комплекс сан болып, <code>type()</code>  num3 переменгің класын <strong>complex</strong> ретінде қайтарады, мынасы  <code>&lt;class 'complex'&gt;</code></li>
+</ul>
+<h2 id="python-тізім-деректер-түрі">Python Тізім Деректер Түрі</h2>
+<p>Тізім бұл бірігіп тұрған бірігіпті немесе бір-біріне тең сипаттамаларды қамтынан тұруды көрсетеді, араларында коммаларды пайдаланып жатты өрістердін ішіне алады және көмегінде  <code>[ ]</code> белгісімен жабылған. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">languages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Swift"</span><span class="token punctuation">,</span> <span class="token string">"Java"</span><span class="token punctuation">,</span> <span class="token string">"Python"</span><span class="token punctuation">]</span>
+</code></pre>
+<p>Мұнда, біз  <strong>3</strong>  жатты қойылған стринг мәндері бар <strong>languages</strong> аталған тізімді құрдық.</p>
+<h3 id="тізім-өрістеріне-кіруге">Тізім Өрістеріне Кіруге</h3>
+<p>Тізімден өрістерге кіруге, біз индекс нөмірін  <strong>(0, 1, 2, …)</strong>  пайдаланамыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">languages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Swift"</span><span class="token punctuation">,</span> <span class="token string">"Java"</span><span class="token punctuation">,</span> <span class="token string">"Python"</span><span class="token punctuation">]</span>
+
+<span class="token comment"># индекс 0-дағы элементке кіру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>languages<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># Swift</span>
+
+<span class="token comment"># индекс 2-деғі элементке кіру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>languages<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># Python</span>
+</code></pre>
+<p>Жоғарыдағы мысалда біз тізімдің ішіндегі элементтерге кіруге индекс мәндерін пайдаланбыз.</p>
+<ul>
+<li><code>languages[0]</code>  -  <code>languages</code> тізімінен бірінші элементке кіру, мәні  <code>Swift</code></li>
+<li><code>languages[2]</code>  -  <code>languages</code> тізімінен үшінші элементке кіру, мәні  <code>Python</code></li>
+</ul>
+<p>Тізімдер туралы көбірек білу үшін  <a href="https://www.programiz.com/python-programming/list">Python Тізімі</a> бетін көріңіз.</p>
+<h2 id="python-tuple-деректер-түрі">Python Tuple Деректер Түрі</h2>
+<p>Tuple - бұл тізімге орнысты, бірақ тек айырмашылығы тізімдерді анықтаудан тиесіліді. Tuple құрылғаннан кейін өзгертуге болмайды.</p>
+<p>Python-да, біз элементтерді түпті сақтау үшін кіріс тақырыптарын пайдаланамыз  <code>()</code> . Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">product <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'Xbox'</span><span class="token punctuation">,</span> <span class="token number">499.99</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда,  product  бір тізім болып, стринг мәні  <code>Xbox</code>  және бүтін мәні  <strong>499.99</strong> .</p>
+<h3 id="тізім-өрістеріне-кіруге-1">Тізім Өрістеріне Кіруге</h3>
+<p>Тізімдерге ұқсас, Python программалау тілінде тізім элементтеріне кіруге индекс нөмірін пайдаланамыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># тізімді құру</span>
+product <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'Microsoft'</span><span class="token punctuation">,</span> <span class="token string">'Xbox'</span><span class="token punctuation">,</span> <span class="token number">499.99</span><span class="token punctuation">)</span>
+
+<span class="token comment"># индекс 0-дағы элементке кіру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>product<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># Microsoft</span>
+
+<span class="token comment"># индекс 1-деғі элементке кіру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>product<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># Xbox</span>
+</code></pre>
+<p>Тізімдер туралы көбірек білу үшін  <a href="https://www.programiz.com/python-programming/tuple">Python Тізімдері</a> бетін көріңіз.</p>
+<h2 id="python-строка-деректер-түрі">Python Строка Деректер Түрі</h2>
+<p>Строка - бұл бір немесе екі бапты белгілі боларынан тұратын белгілердін тұратын последовательлік. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">name <span class="token operator">=</span> <span class="token string">'Python'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>  
+
+message <span class="token operator">=</span> <span class="token string">'Python for beginners'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre><code>Python
+Python for beginners
+</code></pre>
+<p>Жоғарыдағы мысалда, біз стринг-түріндегі атаулы  name  және  message  перемендерін  соответственно  <code>'Python'</code>  және  <code>'Python for beginners'</code>  мәндерімен  құрдық.</p>
+<p>Строкалар туралы көбірек білу үшін  <a href="https://www.programiz.com/python-programming/string">Python Строкалары</a> бетін көріңіз.</p>
+<h2 id="python-мөлшер-деректер-түрі">Python Мөлшер Деректер Түрі</h2>
+<p>Мөлшер - бұл басқа басқа түсті элементтерді орнатқан біртіректі тізім. Мөлшерді орнату үшін фигураларды  <code>{ }</code>  ішіне пайдаланылған мәндермен көмекке келеді. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># student_id атаулы мөлшерді құру</span>
+student_id <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">112</span><span class="token punctuation">,</span> <span class="token number">114</span><span class="token punctuation">,</span> <span class="token number">116</span><span class="token punctuation">,</span> <span class="token number">118</span><span class="token punctuation">,</span> <span class="token number">115</span><span class="token punctuation">}</span>
+
+<span class="token comment"># student_id элементтерін көрсету</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student_id<span class="token punctuation">)</span>
+
+<span class="token comment"># student_id түрін көрсету</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>student_id<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre><code>{112, 114, 115, 116, 118}
+&lt;class 'set'&gt;
+</code></pre>
+<p>Мұнда, біз  <strong>5</strong>  бүтін мәні бар  <code>student_info</code>  аталған мөлшерді құрдық.</p>
+<p>Мөлшерлер тізбектер емес, оларды индекске келтірудің мәні жоқ. Сондықтан, кесу операторы  <code>[]</code>  жұмыс істемейді.</p>
+<p>Мөлшерлер туралы көбірек білу үшін  <a href="https://www.programiz.com/python-programming/set">Python Мөлшерлері</a> бетін көріңіз.</p>
+<h2 id="python-сөздік-деректер-түрі">Python Сөздік Деректер Түрі</h2>
+<p>Python сөздігі элементтерді орнатқан біртіректі тізім. Ол элементтерді кілт/мән жиынында сақтайды.</p>
+<p>Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># capital_city атаулы сөздікті құру</span>
+capital_city <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'Nepal'</span><span class="token punctuation">:</span> <span class="token string">'Kathmandu'</span><span class="token punctuation">,</span> <span class="token string">'Italy'</span><span class="token punctuation">:</span> <span class="token string">'Rome'</span><span class="token punctuation">,</span> <span class="token string">'England'</span><span class="token punctuation">:</span> <span class="token string">'London'</span><span class="token punctuation">}</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>capital_city<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token punctuation">{</span><span class="token string">'Nepal'</span><span class="token punctuation">:</span> <span class="token string">'Kathmandu'</span><span class="token punctuation">,</span> <span class="token string">'Italy'</span><span class="token punctuation">:</span> <span class="token string">'Rome'</span><span class="token punctuation">,</span> <span class="token string">'England'</span><span class="token punctuation">:</span> <span class="token string">'London'</span><span class="token punctuation">}</span>
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  capital_city  атаулы сөздікті құрдық. Мұнда:</p>
+<ol>
+<li><strong>Кілттер</strong>  -  <code>'Nepal'</code>,  <code>'Italy'</code>,  <code>'England'</code></li>
+<li><strong>Мәндер</strong>  -  <code>'Kathmandu'</code>,  <code>'Rome'</code>,  <code>'London'</code></li>
+</ol>
+<h3 id="кілттерді-қолданып-сөздік-мәндеріне-кіруге">Кілттерді Қолданып Сөздік Мәндеріне Кіруге</h3>
+<p>Мынауларды  <code>value</code>-ларды  келесіде қолданамыз. Бірақ басқа жолмен жоқ. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># capital_city атаулы сөздікті құру</span>
+capital_city <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'Nepal'</span><span class="token punctuation">:</span> <span class="token string">'Kathmandu'</span><span class="token punctuation">,</span> <span class="token string">'Italy'</span><span class="token punctuation">:</span> <span class="token string">'Rome'</span><span class="token punctuation">,</span> <span class="token string">'England'</span><span class="token punctuation">:</span> <span class="token string">'London'</span><span class="token punctuation">}</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>capital_city<span class="token punctuation">[</span><span class="token string">'Nepal'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Kathmandu мәнін көрсетеді</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>capital_city<span class="token punctuation">[</span><span class="token string">'Kathmandu'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># қате хабарламасын шығаратындау </span>
+</code></pre>
+<p>Мұнда, біз  capital_city  атаулы сөздіктен кілттерді қолданып мәндерді кірегімізді көрдік.</p>
+<p>Әрі,  <code>'Nepal'</code>  - бұл кілт, сондықтан  <code>capital_city['Nepal']</code>  оның мәніні  <code>Kathmandu</code>  қайтарып отырады.</p>
+<p>Бірақ,  <code>'Kathmandu'</code>  - бұл  <code>'Nepal'</code>  кілтіне арналған мән, сондықтан  <code>capital_city['Kathmandu']</code>  қате хабарламасын шығаратындау.</p>
+<p>Сөздіктер туралы көбірек білу үшін  <a href="https://www.programiz.com/python-programming/dictionary">Python Сөздігі</a> бетін көріңіз.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
