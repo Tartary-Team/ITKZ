@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-негізгі-кіру-және-шығу">Python Негізгі Кіру және Шығу</a>
+<ul>
+<li><a href="#python-шығу">Python Шығу</a></li>
+<li><a href="#мысал-1-python-шығару-мәліметі">Мысал 1: Python Шығару Мәліметі</a></li>
+<li><a href="#мысал-2-python-print-келесі-бағамен">Мысал 2: Python print() келесі бағамен</a></li>
+<li><a href="#мысал-3-python-print-сеп-түрімен">Мысал 3: Python print() сеп түрімен</a></li>
+<li><a href="#мысал-python-айнымалылар-мен-литералдарды-шығару">Мысал: Python айнымалылар мен Литералдарды Шығару</a></li>
+<li><a href="#мысал-стрингтерді-біріктіру">Мысал: Стрингтерді Біріктіру</a></li>
+<li><a href="#шығару-өңдеу">Шығару өңдеу</a></li>
+<li><a href="#python-кіру">Python Кіру</a></li>
+<li><a href="#мысал-python-пайдаланушы-кірімі">Мысал: Python Пайдаланушы Кірімі</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-негізгі-кіру-және-шығу">Python Негізгі Кіру және Шығу</h1>
+<h2 id="python-шығу">Python Шығу</h2>
+<p>Python-да өшірілетінді шығару үшін біз өзімізді  <code>print()</code>  функциясын пайдалана аламыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Python қуатты'</span><span class="token punctuation">)</span>
+<span class="token comment"># Шығару: Python қуатты</span>
+</code></pre>
+<p>Мұнда  <code>print()</code>  функциясы жолдың ішінде жаттығумен жаталған стрингді көрсетеді.</p>
+<p><strong>print() функциясының синтаксисті</strong></p>
+<p>Жоғарыдағы кодта  <code>print()</code>  функциясы тек бір параметрді алуды көрсетіп отыр.</p>
+<p>Бірақ  print функциясының жалпы синтаксисті  <strong>5</strong>  параметрді қабылдайды</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token operator">=</span> separator<span class="token operator">=</span> end<span class="token operator">=</span> <span class="token builtin">file</span><span class="token operator">=</span> flush<span class="token operator">=</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мында,</p>
+<ul>
+<li><strong>object</strong>  - Шығарылатын мән(деректер)</li>
+<li><strong>sep</strong>  (міндетті емес) -  <code>print()</code>  ішінде бірнеше  <strong>object</strong>  деректерді бөлу үшін пайдаланамыз.</li>
+<li><strong>end</strong>  (міндетті емес) - жаттық бағдарламаларды қосуға мүмкіндік береді, мәселен: жаңа жол  <code>"\n"</code>, табуляция  <code>"\t"</code></li>
+<li><strong>file</strong>  (міндетті емес) - мәндер көрсетілетін жер. Оның әдепкі мәні  <code>sys.stdout</code>  (экран)</li>
+<li><strong>flush</strong>  (міндетті емес) - шығатын немесе буферленетіндігін көрсететін булев түрінде. Әдепкі мәні:  <code>False</code></li>
+</ul>
+<h2 id="мысал-1-python-шығару-мәліметі">Мысал 1: Python Шығару Мәліметі</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Қайырлы таң!'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Бүгін жаулап'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Қайырлы таң!
+Бүгін жаулап
+</code></pre>
+<p>Жоғарыдағы мысалда,  <code>print()</code>  операторы тек  <strong>object</strong>  шығаратындығын көрсетеді. Мұнда  <strong>end</strong>  үшін мән  пайдаланылмайды. Сондықтан ол әдепкі мәні  <code>'\n'</code> түсініледі.</p>
+<p>Сондықтан, біз шығарманы екі айырмашы жолда аламыз.</p>
+<h2 id="мысал-2-python-print-келесі-бағамен">Мысал 2: Python print() келесі бағамен</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># алдауымен жаттығумен</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Қайырлы таң!'</span><span class="token punctuation">,</span> end<span class="token operator">=</span> <span class="token string">' '</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Бүгін жаулап'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Қайырлы таң! Бүгін жаулап
+</code></pre>
+<p>Екінші  <code>print()</code>  операторынан кейін  <code>end= ' '</code>  мәнін қосауды көрейік.</p>
+<p>Сондықтан, біз шығарманы бос орынмен бір жолда аламыз.</p>
+<h2 id="мысал-3-python-print-сеп-түрімен">Мысал 3: Python print() сеп түрімен</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Жаңа Жыл'</span><span class="token punctuation">,</span> <span class="token number">2023</span><span class="token punctuation">,</span> <span class="token string">'Таныстымыз'</span><span class="token punctuation">,</span> sep<span class="token operator">=</span> <span class="token string">'. '</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Жаңа Жыл. 2023. Таныстымыз
+</code></pre>
+<p>Жоғарыдағы мысалда,  <code>print()</code>  операторына бірнеше  <strong>items</strong>  немесе деректер көрсетіледі.</p>
+<p>Енгізілгенде мыналарды  <code>print()</code>  операторы ішінде орнатылған сипаттамалы параметр  <code>sep= ". "</code>  пайдаланылғанын көредік.</p>
+<p>Сондықтан, шығару мыналарды  <code>.</code>  орнатып, коммадан алдыранып көрсетеді.</p>
+<h2 id="мысал-python-айнымалылар-мен-литералдарды-шығару">Мысал: Python айнымалылар мен Литералдарды Шығару</h2>
+<p>Біз  <a href="https://www.programiz.com/python-programming/variables-constants-literals">Python айнымалыларын</a> және <a href="https://www.programiz.com/python-programming/variables-constants-literals">Python литералдарын</a> шығару үшін  <code>print()</code>  функциясында пайдалана аламыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10.6</span>
+
+name <span class="token operator">=</span> <span class="token string">"Programiz"</span>
+
+<span class="token comment"># литералдарды шығару     </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># айнымалыларды шығару</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>5
+-10.6
+Programiz
+</code></pre>
+<h2 id="мысал-стрингтерді-біріктіру">Мысал: Стрингтерді Біріктіру</h2>
+<p>Біз  <code>print()</code>  операторы ішінде екі стрингті үйлесімді біріктіруге де боламыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Programiz жақсы.'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Programiz жақсы.
+</code></pre>
+<p>Мұнда,</p>
+<ul>
+<li><code>+</code>  операторы  <code>'Programiz жақсы.'</code>  және  <code>'awesome.'</code>  стрингтерін үйлесіп отырады</li>
+<li><code>print()</code>  функциясы біріктірілген стрингті шығаратындығын көрсетеді</li>
+</ul>
+<h2 id="шығару-өңдеу">Шығару өңдеу</h2>
+<p>Кейде, шығармамызды көрінісін көмекпен өзгерту қажет болады. Бұл  <code>str.format()</code>  әдісін пайдалана отырып істейді. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token number">5</span>
+y <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x мәні {} және y мәні {}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда, фигуралы асаулар  <code>{}</code>  орындалған. Оларды көрсету үшін біз оларды нөмірлеу арқылы көрсете аламыз (tuple index).</p>
+<h2 id="python-кіру">Python Кіру</h2>
+<p>Программалау жасауда, бізге пайдаланушыдан кіру кізім кетуі келеді. Python-да біз  <code>input()</code>  функциясын қолдана аламыз.</p>
+<p><strong>input() функциясының синтаксисті</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">input</span><span class="token punctuation">(</span>prompt<span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда,  <code>prompt</code>  экранда көрсетілетін стринг. Оны қосу үшін жаңа пайдалану бойынша таңбалауланады.</p>
+<h2 id="мысал-python-пайдаланушы-кірімі">Мысал: Python Пайдаланушы Кірімі</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># пайдаланушыдан кіру кіру үшін input() пайдалану</span>
+num <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Сан енгізіңіз: '</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сіз енгіздіңіз:'</span><span class="token punctuation">,</span> num<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'num дата түрі:'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Сан енгізіңіз: 10
+Сіз енгіздіңіз: 10
+num дата түрі: &lt;class 'str'&gt;
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  <code>input()</code>  функциясын қолдана алып, кіруге мүмкіндік бердік жасап, оны  num  айнымалысында сақтадык.</p>
+<p>Енгізілген мән  <strong>10</strong>  сан емес, себебі  <code>type(num)</code>   <code>&lt;class 'str'&gt;</code>  көрсетеді.</p>
+<p>Пайдаланушыдан кіруге енгізілген мәні санга айналдыру үшін мы  <code>int()</code>  не  <code>float()</code>  функцияларын пайдалана аламыз:</p>
+<pre class=" language-python"><code class="prism  language-python">num <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Сан енгізіңіз: '</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда, пайдаланушыдан кіруге енгізілген деректерді санга айналдыруды үйлесімділікті пайдаланамыз.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>

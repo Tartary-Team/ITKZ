@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-операторлар">Python Операторлар</a>
+<ul>
+<li><a href="#python-операторлардың-түрлері">Python Операторлардың Түрлері</a></li>
+<li><a href="#python-арифметикалық-операторлар">1. Python Арифметикалық Операторлар</a></li>
+<li><a href="#python-тағайындау-операторлары">2. Python Тағайындау Операторлары</a></li>
+<li><a href="#python-салыстыру-операторлары">3. Python Салыстыру Операторлары</a></li>
+<li><a href="#python-логикалық-операторлар">4. Python Логикалық Операторлар</a></li>
+<li><a href="#python-битті-операторлар">5. Python Битті Операторлар</a></li>
+<li><a href="#python-әрекетшілік-операторлар">6. Python Әрекетшілік операторлар</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-операторлар">Python Операторлар</h1>
+<p>Операторлар - бұл айнымалылар мен мәндерде өңдеулерді орындайтын арнайы белгілер. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span>   <span class="token comment"># 11</span>
+</code></pre>
+<p>Мұнда,  <code>+</code>  - бұл екі саны  <strong>5</strong>  және  <strong>6</strong>  қосу жасау өңдегі оператор.</p>
+<h2 id="python-операторлардың-түрлері">Python Операторлардың Түрлері</h2>
+<p>Бұл оқу бойынша бізге берілген Python операторларының түрлерінің тізімі.</p>
+<ol>
+<li><a href="https://www.programiz.com/python-programming/operators#arithmetic">Арифметикалық операторлар</a></li>
+<li><a href="https://www.programiz.com/python-programming/operators#assignment">Атаулы операторлар</a></li>
+<li><a href="https://www.programiz.com/python-programming/operators#comparison">Салыстыру операторлары</a></li>
+<li><a href="https://www.programiz.com/python-programming/operators#logical">Логикалық операторлар</a></li>
+<li><a href="https://www.programiz.com/python-programming/operators#bitwise">Биттік операторлар</a></li>
+<li><a href="https://www.programiz.com/python-programming/operators#special">Арнайы операторлар</a></li>
+</ol>
+<h2 id="python-арифметикалық-операторлар">1. Python Арифметикалық Операторлар</h2>
+<p>Арифметикалық операторлар математикалық өңдеуді орындау үшін пайдаланылады - қосу, алау, көбейту, жасау жаттығулары, салыстыру, бөлу жаттығулары, көбейту жаттығулары, тамыздандыру жаттығулары жаттығулары көпшілігі. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">sub <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">-</span> <span class="token number">5</span> <span class="token comment"># 5</span>
+</code></pre>
+<p>Мұнда,  <code>-</code>  - бұл екі мән немесе айнымалуларды камтып отыратын арифметикалық оператор.</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Операция</th>
+<th>Мысалы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Қосу</td>
+<td>5 + 2 = 7</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Алау</td>
+<td><code>4 - 2 = 2</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Көбейту</td>
+<td><code>2 * 3 = 6</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Бөлу</td>
+<td><code>4 / 2 = 2</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>Тамыздандыру</td>
+<td><code>10 // 3 = 3</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Модуль</td>
+<td><code>5 % 2 = 1</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Көтеру</td>
+<td><code>4 ** 2 = 16</code></td>
+</tr>
+</tbody>
+</table><h3 id="мысал-1-python-да-арифметикалық-операторлар">Мысал 1: Python-да Арифметикалық Операторлар</h3>
+<pre class=" language-python"><code class="prism  language-python">a <span class="token operator">=</span> <span class="token number">7</span>
+b <span class="token operator">=</span> <span class="token number">2</span>
+
+<span class="token comment"># қосу</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Қосымша: '</span><span class="token punctuation">,</span> a <span class="token operator">+</span> b<span class="token punctuation">)</span>  
+
+<span class="token comment"># алау</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Алау: '</span><span class="token punctuation">,</span> a <span class="token operator">-</span> b<span class="token punctuation">)</span>   
+
+<span class="token comment"># көбейту</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Көбейту: '</span><span class="token punctuation">,</span> a <span class="token operator">*</span> b<span class="token punctuation">)</span>  
+
+<span class="token comment"># бөлу</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Бөлу: '</span><span class="token punctuation">,</span> a <span class="token operator">/</span> b<span class="token punctuation">)</span> 
+
+<span class="token comment"># тамыздандыру</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Тамыздандыру: '</span><span class="token punctuation">,</span> a <span class="token operator">//</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># модуль</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Модуль: '</span><span class="token punctuation">,</span> a <span class="token operator">%</span> b<span class="token punctuation">)</span>  
+
+<span class="token comment"># a бойынша b көтерімі</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Көтеру: '</span><span class="token punctuation">,</span> a <span class="token operator">**</span> b<span class="token punctuation">)</span>   
+</code></pre>
+<p><strong>Шығару</strong></p>
+<pre><code>Қосымша: 9
+Алау: 5
+Көбейту: 14
+Бөлу: 3.5
+Тамыздандыру: 3
+Модуль: 1
+Көтеру: 49
+</code></pre>
+<p>Жоғарыда көрсетілген мысалда біз бірнеше арифметикалық операторларды қолданғанмыз,</p>
+<ul>
+<li><code>+</code>  -  <code>a</code>  мен  <code>b</code>  ды қосу үшін</li>
+<li><code>-</code>  -  <code>a</code>  мен  <code>b</code>  ды  алау үшін</li>
+<li><code>*</code>  -  <code>a</code>  мен  <code>b</code>  ды көбейту үшін</li>
+<li><code>/</code>  -  <code>a</code>  мен  <code>b</code>  ды бөлу үшін</li>
+<li><code>//</code>  -  <code>a</code>  мен  <code>b</code>  ды тамыздандыру үшін</li>
+<li><code>%</code>  -  қалдықты алу үшін</li>
+<li><code>**</code>  -  <code>a</code>  бойынша  <code>b</code>  көтергісін алу үшін</li>
+</ul>
+<h2 id="python-тағайындау-операторлары">2. Python Тағайындау Операторлары</h2>
+<p>Тағайындау операторлары мәндерді атауларға қосу үшін қолданылады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># x-ге 5 тағайындау</span>
+var x <span class="token operator">=</span> <span class="token number">5</span>
+</code></pre>
+<p>Мұнда,  <code>=</code>  - бұл  <code>x</code> -ке  <code>5</code>  мәнін тағайындау үшін тағайындау операторы.</p>
+<p>Python-да барлық тағайындау операторларының тізімі.</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Атауы</th>
+<th>Мысалы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>Тағайындау Операторы</td>
+<td><code>a = 7</code></td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>Қосу Тағайындау</td>
+<td><code>a += 1 # a = a + 1</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>Алау Тағайындау</td>
+<td><code>a -= 3 # a = a - 3</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>Көбейту Тағайындау</td>
+<td><code>a *= 4 # a = a * 4</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>Бөлу Тағайындау</td>
+<td><code>a /= 3 # a = a / 3</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>Қалдықты алу Тағайындау</td>
+<td><code>a %= 10 # a = a % 10</code></td>
+</tr>
+<tr>
+<td><code>**=</code></td>
+<td>Қасатталу Тағайындау</td>
+<td><code>a **= 10 # a = a ** 10</code></td>
+</tr>
+</tbody>
+</table><h3 id="мысал-2-тағайындау-операторлары">Мысал 2: Тағайындау Операторлары</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># a-ге 10 тағайындау</span>
+a <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token comment"># b-ге 5 тағайындау</span>
+b <span class="token operator">=</span> <span class="token number">5</span> 
+
+<span class="token comment"># a-ге a және b-дың қосымшасын тағайындау</span>
+a <span class="token operator">+=</span> b      <span class="token comment"># a = a + b</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment"># Шығару: 15</span>
+</code></pre>
+<p>Мұнда, біз  <code>a</code>  мен  <code>b</code>  дың қосымшасын  <code>a</code> -ге тағайындау үшін  <code>+=</code>  операторын қолданбыз.</p>
+<p>Оларды қажет болатын басқа тағайындау операторларында қолдана аламыз.</p>
+<h2 id="python-салыстыру-операторлары">3. Python Салыстыру Операторлары</h2>
+<p>Салыстыру операторлары екі мән/переменді салыстырады және <strong>True</strong> немесе <strong>False</strong> мәнін қайтарып табады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span>a <span class="token operator">&gt;</span> b<span class="token punctuation">)</span>    <span class="token comment"># Жауап: True</span>
+</code></pre>
+<p>Мұнда,  <code>&gt;</code>  салыстыру операторын қолдану арқылы  <code>a</code>  мен  <code>b</code>  ды салыстыру үшін пайдаланылды.</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Мағына</th>
+<th>Мысалы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Тең</td>
+<td><code>3 == 5</code> бізге <strong>Жалған</strong> қайтаратын</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Тең емес</td>
+<td><code>3 != 5</code> бізге <strong>True</strong> қайтаратын</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Көп</td>
+<td><code>3 &gt; 5</code> бізге <strong>Жалған</strong> қайтаратын</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Аз</td>
+<td><code>3 &lt; 5</code> бізге <strong>True</strong> қайтаратын</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Көп немесе тең</td>
+<td><code>3 &gt;= 5</code> бізге <strong>Жалған</strong> қайтаратын</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Аз немесе тең</td>
+<td><code>3 &lt;= 5</code> бізге <strong>True</strong> қайтаратын</td>
+</tr>
+</tbody>
+</table><h3 id="мысал-3-салыстыру-операторлары">Мысал 3: Салыстыру Операторлары</h3>
+<pre class=" language-python"><code class="prism  language-python">a <span class="token operator">=</span> <span class="token number">5</span>
+
+b <span class="token operator">=</span> <span class="token number">2</span>
+
+<span class="token comment"># теңдік операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a == b ='</span><span class="token punctuation">,</span> a <span class="token operator">==</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># теңдік емес операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a != b ='</span><span class="token punctuation">,</span> a <span class="token operator">!=</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># көптік операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a &gt; b ='</span><span class="token punctuation">,</span> a <span class="token operator">&gt;</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># аздык операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a &lt; b ='</span><span class="token punctuation">,</span> a <span class="token operator">&lt;</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># көп немесе тең операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a &gt;= b ='</span><span class="token punctuation">,</span> a <span class="token operator">&gt;=</span> b<span class="token punctuation">)</span>
+
+<span class="token comment"># аз немесе тең операторы</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a &lt;= b ='</span><span class="token punctuation">,</span> a <span class="token operator">&lt;=</span> b<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармасы</strong></p>
+<pre><code>a == b = Жалған
+a != b = True
+a &gt; b = Жалған
+a &lt; b = Жалған
+a &gt;= b = Жалған
+a &lt;= b = Жалған
+</code></pre>
+<blockquote>
+<p><strong>Ескерту:</strong>  Салыстыру операторлары қабылдау іске асыру және циклдерде пайдаланылады. Оларды біз соңғы нұсқаларда өтетін боламыз.</p>
+</blockquote>
+<h2 id="python-логикалық-операторлар">4. Python Логикалық Операторлар</h2>
+<p>Логикалық операторлар айнымалын  <code>True</code>  немесе  <code>False</code>  ма?дама бойынша тексеру үшін пайдаланылады. Олар  шешу іске асыруда пайдаланылады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span> <span class="token number">6</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>b <span class="token operator">&gt;=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># Жауап: Жалған</span>
+</code></pre>
+<p>Мұнда,  <code>and</code>  — бұл логикалық оператор  <strong>ЖӘНЕ</strong>. Себебі  <code>a &gt; 2</code>  мен  <code>b &gt;= 6</code>  көрсеткілері көптеген болды, онда нәтиже  <code>Жалған</code> .</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Мысал</th>
+<th>Мағына</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>a <strong>and</strong> b</td>
+<td><strong>Логикалық ЖӘНЕ</strong>: тек үшін обандылар барысында <code>True</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>a <strong>or</strong> b</td>
+<td><strong>Логикалық Немесе</strong>: обандардың кем дегенде бірі <code>True</code> болса, онда <code>True</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td><strong>not</strong> a</td>
+<td><strong>Логикалық ЕМЕС</strong>: операндасы  <code>False</code> болмаса  <code>True</code>, және көмегімен: <code>False</code>.</td>
+</tr>
+</tbody>
+</table><h3 id="мысал-4-логикалық-операторлар">Мысал 4: Логикалық Операторлар</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># логикалық ЖӘНЕ</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token boolean">True</span> <span class="token operator">and</span> <span class="token boolean">True</span><span class="token punctuation">)</span>     <span class="token comment"># Жалған</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token boolean">True</span> <span class="token operator">and</span> <span class="token boolean">False</span><span class="token punctuation">)</span>    <span class="token comment"># Жалған емес</span>
+
+<span class="token comment"># логикалық Немесе</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token boolean">True</span> <span class="token operator">or</span> <span class="token boolean">False</span><span class="token punctuation">)</span>     <span class="token comment"># Жалған</span>
+
+<span class="token comment"># логикалық ЕМЕС</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">not</span> <span class="token boolean">True</span><span class="token punctuation">)</span>          <span class="token comment"># Жалған емес</span>
+</code></pre>
+<blockquote>
+<p><strong>Ескерту</strong>: Бұл логикалық операторлардың  <a href="https://www.programiz.com/python-programming/keyword-list#and_or_not">жауаптар кестесі</a>  бар.</p>
+</blockquote>
+<h2 id="python-битті-операторлар">5. Python Битті Операторлар</h2>
+<p>Битті операторлар операндтарды біріктірілген биттердің стройкаларымыздан көмек көрген жасау түрінде жұмыс істейді. Олар біт бойынша жұмыс істейді, сондықтан олардың атауы.</p>
+<p>Мысалы, <strong>2</strong> біріктіктің байтында <code>10</code> жатамында жататып, <strong>7</strong> біріктіктің байтында <code>111</code> жатамында жататып көрсетілген.</p>
+<p><strong>Төменгі кестеде:</strong>  <code>x</code> = 10 (<code>0000 1010</code> байтында) және <code>y</code> = 4 (<code>0000 0100</code> байтында) деп саналсақ</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Мағына</th>
+<th>Мысал</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>Битті Және</td>
+<td><code>x &amp; y = 0</code> (<code>0000 0000</code>)</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>Битті Немесе</td>
+<td><code>x | y = 14</code> (<code>0000 1110</code>)</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>Битті Емес</td>
+<td><code>~x = -11</code> (<code>1111 0101</code>)</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Битті XOR</td>
+<td><code>x ^ y = 14</code> (<code>0000 1110</code>)</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Битті оңға жылжу</td>
+<td><code>x &gt;&gt; 2 = 2</code> (<code>0000 0010</code>)</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Битті солға жылжу</td>
+<td><code>x &lt;&lt; 2 = 40</code> (<code>0010 1000</code>)</td>
+</tr>
+</tbody>
+</table><h2 id="python-әрекетшілік-операторлар">6. Python Әрекетшілік операторлар</h2>
+<p>Пайдаланушы өзінің есепшілікті операторларды қолдайды. Оларды ақпараттау және тілекті қолдану жасау мүмкіндігімен тауарлайды. Мысалдармен бірге төменде түсіндірілгендері көрсетілген.</p>
+<h3 id="теңестік-операторлар">Теңестік операторлар</h3>
+<p>Python тілінде <code>is</code> және <code>is not</code> бұлардык жағдайда екі мәннің тізімге түсіген немесе түсіген болғанын тексеру үшін қолданылады. Егер екі теңдік болса, олардың ойынша болуы оларды теңдейтін сияқты болмайтындығын айту қажет.</p>
+
+<table>
+<thead>
+<tr>
+<th>Оператор</th>
+<th>Мағына</th>
+<th>Мысал</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is</code></td>
+<td>Операндтар теңдік болса (<code>True</code> қайтаратынды)</td>
+<td><code>x is True</code></td>
+</tr>
+<tr>
+<td><code>is not</code></td>
+<td>Операндтар теңдік болмаса (<code>True</code> қайтаратынды)</td>
+<td><code>x is not True</code></td>
+</tr>
+</tbody>
+</table><h3 id="мысал-4-python-тағы-теңестік-операторлар">Мысал 4: Python-тағы Теңестік операторлар</h3>
+<pre class=" language-python"><code class="prism  language-python">x1 <span class="token operator">=</span> <span class="token number">5</span>
+y1 <span class="token operator">=</span> <span class="token number">5</span>
+x2 <span class="token operator">=</span> <span class="token string">'Hello'</span>
+y2 <span class="token operator">=</span> <span class="token string">'Hello'</span>
+x3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+y3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>x1 <span class="token keyword">is</span> <span class="token operator">not</span> y1<span class="token punctuation">)</span>  <span class="token comment"># Жалпысы False шығарады</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>x2 <span class="token keyword">is</span> y2<span class="token punctuation">)</span>  <span class="token comment"># Жалпысы True шығарады</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>x3 <span class="token keyword">is</span> y3<span class="token punctuation">)</span>  <span class="token comment"># Жалпысы False шығарады</span>
+</code></pre>
+<p>Мысалда көрінеді,  x1  мен  y1  бірдей мәнді бұрыннан бұрын болғаны үшін олар тең, сондай-а олар бірдей мәнді және теңдей болатыны үшін олар идентификацияланады.  x2  мен  y2  (стрингтер) үшін де олар бірдей мәнге ие, сонымен қатар идентификацияланады.</p>
+<p>Бірақ  x3  мен  y3  (тізімдер) бірдей мәнге ие болады, бірақ олар идентификацияланбайды. Бұл оларды сызба меншікте өзара біріккенге қараушында ойынымен көрсетуімізден көп болады.</p>
+<h3 id="мысал-5-membership-операторлары-python-да">Мысал 5: Membership операторлары Python-да</h3>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">3</span> <span class="token keyword">in</span> x<span class="token punctuation">)</span>  <span class="token comment"># 3 саны x тізімінде табылады, сондықтан True шығарады</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">not</span> <span class="token keyword">in</span> x<span class="token punctuation">)</span>  <span class="token comment"># 6 саны x тізімінде табылмайды, сондықтан True шығарады</span>
+</code></pre>
+<p>Мысалда көрінеді,  x  тізімінде  3  саны табылады, сондықтан  <code>in</code>  операторы  <code>True</code>  шығарып,  6  саны табылмайды, сондықтан  <code>not in</code>  операторы  <code>True</code>  шығарып тұрады.</p>
+<h3 id="мысал-5-membership-операторлары-python-да-1">Мысал 5: Membership операторлары Python-да</h3>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token string">'Hello world'</span>
+y <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token string">'b'</span><span class="token punctuation">}</span>
+
+<span class="token comment"># 'H' тауары x стрингінде бар мағынасын тексеру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'H'</span> <span class="token keyword">in</span> x<span class="token punctuation">)</span>  <span class="token comment"># True шығарып тастайды</span>
+
+<span class="token comment"># 'hello' тауары x стрингінде бар мағынасын тексеру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello'</span> <span class="token operator">not</span> <span class="token keyword">in</span> x<span class="token punctuation">)</span>  <span class="token comment"># True шығарып тастайды</span>
+
+<span class="token comment"># '1' кілті y диктында бар мағынасын тексеру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token keyword">in</span> y<span class="token punctuation">)</span>  <span class="token comment"># True шығарып тастайды</span>
+
+<span class="token comment"># 'a' кілті y диктында бар мағынасын тексеру</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a'</span> <span class="token keyword">in</span> y<span class="token punctuation">)</span>  <span class="token comment"># False шығарып тастайды</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>True
+True
+True
+False
+</code></pre>
+<p>Мысалда, <code>'H'</code>  x стрингінде бар, бірақ <code>'hello'</code>  x стрингінде бар емес (ескеріп тұрып, Python регистрдік емес).</p>
+<p>Ойда  <code>1</code>  дикте  y-да кілт болып, <code>'a'</code>  оның мағынасы. Сондықтан  <code>'a' in y</code>  False  шығарады.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
