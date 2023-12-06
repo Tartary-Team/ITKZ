@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rust</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-for-цикл">Python for Цикл</a>
+<ul>
+<li><a href="#python-for-цикл-1">Python for Цикл</a></li>
+<li><a href="#for-циклінің-синтаксисі">for Циклінің Синтаксисі</a></li>
+<li><a href="#python-for-циклінің-flowchart">Python for Циклінің Flowchart</a></li>
+<li><a href="#мысал-строка-бойынша-циклі">Мысал: Строка бойынша Циклі</a></li>
+<li><a href="#python-for-loop-со-python-range">Python for Loop со Python range()</a></li>
+<li><a href="#элементтерге-қатыстыра-алмасақ--for-циклін-пайдалану">Элементтерге қатыстыра алмасақ  for циклін пайдалану</a></li>
+<li><a href="#python-for-циклімен-else">Python for циклімен else</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-for-цикл">Python for Цикл</h1>
+<p>Компьютерлік программалау үшін циклдер кодты кейіп түсіру үшін қолданылады.</p>
+<p>Мысалы, егер бізге хабарламаны <strong>100</strong> рет көрсету керек болса, онда біз циклді қолдана аламыз. Бұл тек өмірде жат жасалған мысал; циклдер арқылы жаттығу жасау мүмкіндіктері көп.</p>
+<p>Python-да екі түрлі цикл бар:</p>
+<ul>
+<li><a href="https://www.programiz.com/python-programming/for-loop">for цикл</a></li>
+<li><a href="https://www.programiz.com/python-programming/while-loop">while цикл</a></li>
+</ul>
+<h2 id="python-for-цикл-1">Python for Цикл</h2>
+<p>Python-да <code>for</code> циклі  <a href="https://www.programiz.com/python-programming/list">тізімдерді</a>,  <a href="https://www.programiz.com/python-programming/tuple">tuple</a>,  <a href="https://www.programiz.com/python-programming/string">жол</a> сияқты элементтер бойынша айналдыру үшін қолданылады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">languages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Swift'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">,</span> <span class="token string">'Go'</span><span class="token punctuation">,</span> <span class="token string">'JavaScript'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># тізімнің көшірмесі бойынша кездесу</span>
+<span class="token keyword">for</span> language <span class="token keyword">in</span> languages<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Swift
+Python
+Go
+JavaScript
+</code></pre>
+<p>Жоғарыдағы мысалда,  <code>languages</code> атандырылған тізімді құрдың. Бірінші бетіні  <code>language</code>  өрісіне  <code>Swift</code> мәнімен орналасқан, сондықтан цикл ішіндегі жауапты басу жаттығу жасалады.</p>
+<p><code>language</code>  тізімнің келесі элементімен жаңартылады, жаттығу өзгергенімен салыстырылған печать жауапты қайтадан орындайды. Осы жолмен, циклдік іске өзгеру тізімнің соңғы элементіне дейін жаттығу жасайды.</p>
+<h2 id="for-циклінің-синтаксисі">for Циклінің Синтаксисі</h2>
+<p><code>for</code> циклінің синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> val <span class="token keyword">in</span> sequence<span class="token punctuation">:</span>
+    <span class="token comment"># оператор(лар)</span>
+</code></pre>
+<p>Мұнда, өзара әр бір ітерацияда дайындалады <code>val</code>  <code>sequence</code> көшірмесінің көрсетілген элементіне кіру үшін. Циклді қоса кетуде <code>sequence</code> көшірмесінің соңғы элементіне дейін жалғастырылады.</p>
+<h2 id="python-for-циклінің-flowchart">Python for Циклінің Flowchart</h2>
+<p><img src="python-for-loop.png" alt=""></p>
+<h2 id="мысал-строка-бойынша-циклі">Мысал: Строка бойынша Циклі</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token string">'Python'</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>P
+y
+t
+h
+o
+n
+</code></pre>
+<h2 id="python-for-loop-со-python-range">Python for Loop со Python range()</h2>
+<p><a href="https://www.programiz.com/python-programming/methods/built-in/range">range</a> - бұл екі сандар арасындағы мәндердің жиынтығы.</p>
+<p>Мұнда, мәндер жиынтығын көрсету үшін Python-дың  <code>range()</code>  емес қолданамыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мұнда,  <code>range()</code> ішіндегі <strong>4</strong> мәні, мәндердің <strong>0, 1, 2, 3</strong> мәндерін көрсетеді.</p>
+<p>Python-да біз  <code>for</code>  цикліні қолдана аламыз, мәндердің жиынтығы бойынша бірінші мысалда, мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># мәндердің жиынтығын көрсету үшін range() қолдану</span>
+values <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+<span class="token comment"># i = 0-дан i = 3-ге дейін ітерация жасау</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> values<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>0
+1
+2
+3
+</code></pre>
+<p>Жоғарыдағы мысалда, <strong>0</strong>-дан <strong>3</strong>-ге дейінді мәндер жиынтығы бойынша  <code>for</code>  цикліні қолдандық.</p>
+<p><code>i</code> мәні <strong>0</strong> болады және көрсетілген ітерацияда қалған сандыққа жататылады. Бұл процес <strong>3</strong>-ге дейін жалғасатын жататылады.</p>
+
+<table>
+<thead>
+<tr>
+<th>Ітерация</th>
+<th>Шарт</th>
+<th>Әрекет</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-ші</td>
+<td><code>True</code></td>
+<td><code>0</code> басылады. <code>i</code> 1-ге көтеріледі.</td>
+</tr>
+<tr>
+<td>2-ші</td>
+<td><code>True</code></td>
+<td><code>1</code> басылады. <code>i</code> 2-ге көтеріледі.</td>
+</tr>
+<tr>
+<td>3-ші</td>
+<td><code>True</code></td>
+<td><code>2</code> басылады. <code>i</code> 3-ге көтеріледі.</td>
+</tr>
+<tr>
+<td>4-ші</td>
+<td><code>True</code></td>
+<td><code>3</code> басылады. <code>i</code> 4-ге көтеріледі.</td>
+</tr>
+<tr>
+<td>5-ші</td>
+<td><code>False</code></td>
+<td>Цикл аяқталады</td>
+</tr>
+</tbody>
+</table><blockquote>
+<p><strong>Ескертпе</strong>: <code>for</code> цикліні <strong>range</strong> бөлігімен қолдану туралы көбірек ақпарат алу үшін, <a href="https://www.programiz.com/python-programming/methods/built-in/range">Python range()</a> жолына көз жасауға болады.</p>
+</blockquote>
+<h2 id="элементтерге-қатыстыра-алмасақ--for-циклін-пайдалану">Элементтерге қатыстыра алмасақ  <code>for</code> циклін пайдалану</h2>
+<p><code>for</code> циклі ішінде көшірмелерді қолдану міндетті емес. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">languages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Swift'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">,</span> <span class="token string">'Go'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> language <span class="token keyword">in</span> languages<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сәлем'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Хай'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Сәлем
+Хай
+Сәлем
+Хай
+Сәлем
+Хай
+</code></pre>
+<p>Мысалда, тізімде үш элемент бар екені себебі, цикл үш рет жұмыс істейді. Әр ітерацияда цикл бөлігі  <code>'Сәлем'</code>  мен  <code>'Хай'</code> деп басады. Тізімнің элементтері циклді ішінде пайдаланылмайды.</p>
+<p>Егер біз тізімнің элементтерін цикл ішінде қолдану көрсетпесек, циклді бұл түрде жазауға болады:</p>
+<pre class=" language-python"><code class="prism  language-python">languages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Swift'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">,</span> <span class="token string">'Go'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> _ <span class="token keyword">in</span> languages<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сәлем'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Хай'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>_</code> символы тізімнің элементтеріні  <code>for</code> циклінін тізбегі ішінде қолданылмайтындығын көрсету үшін пайдаланылады.</p>
+<h2 id="python-for-циклімен-else">Python for циклімен else</h2>
+<p><code>for</code> циклінің қосымша  <code>else</code>  блогы бола алады. <code>else</code> блогы осы циклді жаңғалауымыздан кейін орындалады (цикл тізбегінің өзгеріп кеткен соң). Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> digits<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Элементтер қалмады."</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>0
+1
+5
+Элементтер қалмады.
+</code></pre>
+<p>Мысалда, <code>for</code> циклі  <code>digits</code> тізімінің барлық элементтерін басады. Цикл аяқталғаннан кейін, ол <code>else</code> блогын орындайды және  <code>Элементтер қалмады.</code> деп басады.</p>
+<blockquote>
+<p><strong>Ескертпе</strong>:  <code>for</code> циклі <a href="https://www.programiz.com/python-programming/break-continue">break</a> операторы арқылы тоқтатылмаса,  <code>else</code> блогы орындалмайды.</p>
+</blockquote>
+
+    </div>
+  </div>
+</body>
+
+</html>
