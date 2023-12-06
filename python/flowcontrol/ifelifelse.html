@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rust</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-if...else-тілек">Python if…else Тілек</a>
+<ul>
+<li><a href="#python-if-операторы">1. Python if операторы</a></li>
+<li><a href="#python-if...else-операторы">2. Python if…else операторы</a></li>
+<li><a href="#python-if...elif...else-операторы">3. Python if…elif…else операторы</a></li>
+<li><a href="#python-таяу-if-операторлары">Python Таяу if операторлары</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-if...else-тілек">Python if…else Тілек</h1>
+<p>Компьютерлік программалау жасаушыларды  <code>if</code>  операторын пайдаланамыз, тек келесі ерекшелікке сай болдырылған уақытта блок кодты орындау үшін.</p>
+<p>Мысалы, оқушының алған бағалары бойынша  <strong>(A, B, C)</strong>  бағалау.</p>
+<ol>
+<li>егер пайыз  <strong>90</strong>-дан асқан болса,  <strong>A</strong>  бағасын беру</li>
+<li>егер пайыз  <strong>75</strong>-тен асқан болса,  <strong>B</strong>  бағасын беру</li>
+<li>егер пайыз  <strong>65</strong>-тен асқан болса,  <strong>C</strong>  бағасын беру</li>
+</ol>
+<p>Python-да  <code>if...else</code>  операторын үш әдепі бар.</p>
+<ol>
+<li><code>if</code>  операторы</li>
+<li><code>if...else</code>  операторы</li>
+<li><code>if...elif...else</code>  операторы</li>
+</ol>
+<h2 id="python-if-операторы">1. Python if операторы</h2>
+<p><code>if</code> операторын Python-да қолданылатын синтаксисі:</p>
+<p><code>if шарт: # if операторының тізбегі</code></p>
+<p><code>if</code> операторы <code>шартты</code> бақылау арқылы ойлайтын.</p>
+<ol>
+<li>Егер <code>шарт</code> <code>True</code>-ге айыппай болса, <code>if</code> операторының тізбегінің ішіндегі код орындалады.</li>
+<li>Егер <code>шарт</code> <code>False</code>-ге айыппай болса, <code>if</code> операторының тізбегінің ішіндегі код өткізілмейді.</li>
+</ol>
+<p><img src="python-if.png" alt=""></p>
+<h3 id="мысал-1-python-if-операторы">Мысал 1: Python if операторы</h3>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token comment"># тексеру, егер сан 0-дан үлкен болса</span>
+<span class="token keyword">if</span> number <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сан позитивтік.'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Егер операторы оңай'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Сан позитивтік.
+Егер операторы оңай
+</code></pre>
+<p>Атаулардың негізгі мысалында, number атандырылған өрісті құрдың. Тексеру шартын көре отырып,</p>
+<pre><code>number &gt; 0
+</code></pre>
+<p>Осында,  number <strong>0</strong>-дан үлкен болып табылады, шарт <strong>True</strong> болады.</p>
+<p>Егер number мәнінің қийметін негативті бүтін сан болса, міне, <strong>-5</strong>.</p>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+</code></pre>
+<p>Қазіргі кезде бағдарламаны іске өзгертсек, шығармашылық:</p>
+<pre><code>Егер операторы оңай
+</code></pre>
+<p>Бұл себебі number мәні <strong>0</strong>-дан аз болғаны үшін шарт <strong>False</strong> болады. Сондықтан, <code>if</code> блогының төмендігі өтіледі.</p>
+<h2 id="python-if...else-операторы">2. Python if…else операторы</h2>
+<p><code>if</code> операторында қосымша <code>else</code> бөлімі болуы мүмкін.</p>
+<p><code>if...else</code> операторының синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> шарт<span class="token punctuation">:</span>
+    <span class="token comment"># егер шарт дұрыс болса орындалатылатын код блогы</span>
+
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token comment"># егер шарт дұрыс емес болса орындалатылатын код блогы</span>
+</code></pre>
+<p><code>if...else</code> операторы берілген <code>шартты</code> бағалау:</p>
+<p><strong>Егер шарт</strong> <code>**дұрыс**</code> <strong>болса,</strong></p>
+<ul>
+<li><code>if</code> ішіндегі код орындалады</li>
+<li><code>else</code> ішіндегі код өтіледі</li>
+</ul>
+<p><strong>Егер шарт</strong> <code>**дұрыс емес**</code> <strong>болса,</strong></p>
+<ul>
+<li><code>else</code> ішіндегі код орындалады</li>
+<li><code>if</code> ішіндегі код өтіледі</li>
+</ul>
+<p><img src="python-if-else.png" alt=""></p>
+<h3 id="мысал-2.-python-if...else-операторы">Мысал 2. Python if…else операторы</h3>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">if</span> number <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Позитивтік сан'</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Негативтік сан'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Мысал өзгертілмейді'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Позитивтік сан
+Мысал өзгертілмейді
+</code></pre>
+<p>Атаулардың жоғарыдағы мысалында, number атандырылған өрісті құрдың. Тексеру шартын көре отырып,</p>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">&gt;</span> <span class="token number">0</span>
+</code></pre>
+<p>Мәні number <strong>10</strong>, ол шартты бағаланау  <code>True</code> болады. Сондықтан, <code>if</code> блогының төмендігі орындалады.</p>
+<p>Егер number мәнінің қийметін негативті бүтін сан болса, міне, <strong>-5</strong>.</p>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+</code></pre>
+<p>Қазіргі кезде бағдарламаны іске өзгертсек, шығармашылық:</p>
+<pre><code>Негативтік сан
+Мысал өзгертілмейді
+</code></pre>
+<p>Осында, тексеру шарты  <code>False</code> болады. Сондықтан, <code>else</code> блогының төмендігі орындалады.</p>
+<h2 id="python-if...elif...else-операторы">3. Python if…elif…else операторы</h2>
+<p><code>if...else</code> операторы екі құрамынан артық код блогын орындау үшін қолданылады.</p>
+<p>Бірақ, егер көбінесе құрамынан артықты таңдау жасау келсе, онда <code>if...elif...else</code> операторын қолданамыз.</p>
+<p><code>if...elif...else</code> операторының синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> шарт<span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token comment"># код блогы 1</span>
+
+<span class="token keyword">elif</span> шарт<span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token comment"># код блогы 2</span>
+
+<span class="token keyword">else</span><span class="token punctuation">:</span> 
+    <span class="token comment"># код блогы 3</span>
+</code></pre>
+<p>Мұнда:</p>
+<ol>
+<li><strong>Шарт1</strong> <code>true</code> болса, <strong>код блогы 1</strong> орындалады.</li>
+<li><strong>Шарт1</strong> <code>false</code> болса, онда <strong>шарт2</strong> бағаланады.
+<ol>
+<li><strong>Шарт2</strong> <code>true</code> болса, <strong>код блогы 2</strong> орындалады.</li>
+<li><strong>Шарт2</strong> <code>false</code> болса, <strong>код блогы 3</strong> орындалады.</li>
+</ol>
+</li>
+</ol>
+<p><img src="python-elif.png" alt=""></p>
+<h3 id="мысал-3-python-if...elif...else-операторы">Мысал 3: Python if…elif…else операторы</h3>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">if</span> number <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Позитивтік сан"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">elif</span> number <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Нөл'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Негативтік сан'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Мысал өзгертілмейді'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Нөл
+Мысал өзгертілмейді
+</code></pre>
+<p>Жоғарыдағы мысалда, number атандырылған өрісті 0-мен құрдың. Мұнда, бізге екі шартты байланыс жасауды көрсеткен:</p>
+<p>Осында, екі жауапты шарт  <code>False</code> болады. Сондықтан, <code>else</code> блогының төмендігі орындалады.</p>
+<h2 id="python-таяу-if-операторлары">Python Таяу if операторлары</h2>
+<p>Мұнда  <strong>if</strong>  операторынан кейін  <strong>if</strong>  операторын қолдануға болады. Бұл  <strong>nested if</strong>  операторы деп аталады.</p>
+<p><strong>Nested if</strong>  операторының синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># сыртқы if операторы</span>
+<span class="token keyword">if</span> шарт<span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token comment"># оператор(лар)</span>
+
+    <span class="token comment"># ішкі if операторы</span>
+    <span class="token keyword">if</span> шарт<span class="token number">2</span><span class="token punctuation">:</span> 
+        <span class="token comment"># оператор(лар)</span>
+</code></pre>
+<blockquote>
+<p><strong>Ескертпе</strong>:<br>
+-   Біз ішкі  <code>if</code>  операторына  <code>else</code>  және  <code>elif</code>  операторларын қоса аламыз (көрсетілгенше).<br>
+-   Егер болмаса, мысалы, сыртқы  <code>else</code>  және  <code>elif</code>  операторлары бар болса, ішкі  <code>if</code>  операторын сыртқы  <code>else</code>  және  <code>elif</code>  операторларында орналастыруымыз.<br>
+-   Біз көптеген деңгейлі  <code>if</code>  операторларын таяулауымыз.</p>
+</blockquote>
+<h3 id="мысал-4-python-nested-if-операторы">Мысал 4: Python Nested if операторы</h3>
+<pre class=" language-python"><code class="prism  language-python">number <span class="token operator">=</span> <span class="token number">5</span>
+
+<span class="token comment"># сыртқы if операторы</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ішкі if операторы</span>
+    <span class="token keyword">if</span> number <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сан 0'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># ішкі else операторы</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сан позитивтік'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># сыртқы else операторы</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сан негативтік'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Шығармашылық: Сан позитивтік</span>
+</code></pre>
+<p>Жоғарыдағы мысалда, берілген санның  <strong>позитивтік, негативтік немесе 0</strong> болатындысын тексеру үшін <strong>nested if</strong> операторын қолданамыз.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
