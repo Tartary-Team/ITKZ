@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rust</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-while-циклі">Python while Циклі</a>
+<ul>
+<li><a href="#python-while-циклі-1">Python while Циклі</a></li>
+<li><a href="#python-while-циклінің-flowchart">Python while Циклінің Flowchart</a></li>
+<li><a href="#мысал-python-while-циклі">Мысал: Python while Циклі</a></li>
+<li><a href="#python-тағы-шексіз-while-циклі">Python-тағы Шексіз while Циклі</a></li>
+<li><a href="#python-while-циклімен-else">Python While циклімен else</a></li>
+<li><a href="#python-for-және-while-циктары">Python for Және while циктары</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-while-циклі">Python while Циклі</h1>
+<p>Программалау үшін циклдер кодты кейіп түсіру үшін қолданылады. Мысалы, егер бізге <strong>100</strong> рет хабарлама көрсету керек болса, онда біз циклді қолдана аламыз. Бұл тек жаттығу мысал, циклдерді пайдалану арқылы біз көбірек іс-әрекеттерді жасауға болады.</p>
+<p>Алдыңғы оқушыда біз  <a href="https://www.programiz.com/python-programming/for-loop">Python for циклі</a> туралы мәлімет алдық. Қазір біз  <code>while</code>  циклі туралы білетініміз.</p>
+<h2 id="python-while-циклі-1">Python while Циклі</h2>
+<p>Python  <code>while</code>  циклі белгілі шартты орындайталайтынша кодты іске асыру үшін қолданылады.</p>
+<p><code>while</code> циклінің синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">while</span> condition<span class="token punctuation">:</span>
+    <span class="token comment"># while циклінің тізбегі</span>
+</code></pre>
+<p>Мұнда,</p>
+<ol>
+<li><code>while</code> циклі  <code>condition</code> шартын тексереді</li>
+<li>Егер  <code>condition</code>  <code>True</code> болса,  <code>while</code>  циклінің ішіндегі код іске асырылады.</li>
+<li><code>condition</code>  қайталанады.</li>
+<li>Бұл процес шарт  <code>False</code> болатын мезгілге дейін жалғастырады.</li>
+<li>Шарт  <code>False</code> болғанда цикл тоқтайды.</li>
+</ol>
+<h2 id="python-while-циклінің-flowchart">Python while Циклінің Flowchart</h2>
+<p><img src="python-while-loop.PNG" alt=""></p>
+<h2 id="мысал-python-while-циклі">Мысал: Python while Циклі</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># 1-ден 5-ке дейін сандарды көрсету программасы</span>
+
+<span class="token comment"># өзгерменді іске асыру</span>
+i <span class="token operator">=</span> <span class="token number">1</span>
+n <span class="token operator">=</span> <span class="token number">5</span>
+
+<span class="token comment"># i = 1-ден n = 5-ке дейінгі while циклі</span>
+<span class="token keyword">while</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>1
+2
+3
+4
+5
+</code></pre>
+<p>Программа қалай жұмыс істейді:</p>
+
+<table>
+<thead>
+<tr>
+<th>Айнымалылар</th>
+<th>Шарт: <code>i &lt;= n</code></th>
+<th>Әрекет</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i = 1</code> <code>n = 5</code></td>
+<td><code>True</code></td>
+<td><code>1</code> басылады. <code>i</code>  <strong>2</strong>-ге көтеріледі.</td>
+</tr>
+<tr>
+<td><code>i = 2</code> <code>n = 5</code></td>
+<td><code>True</code></td>
+<td><code>2</code> басылады. <code>i</code>  <strong>3</strong>-ге көтеріледі.</td>
+</tr>
+<tr>
+<td><code>i = 3</code> <code>n = 5</code></td>
+<td><code>True</code></td>
+<td><code>3</code> басылады. <code>i</code>  <strong>4</strong>-ге көтеріледі.</td>
+</tr>
+<tr>
+<td><code>i = 4</code> <code>n = 5</code></td>
+<td><code>True</code></td>
+<td><code>4</code> басылады. <code>i</code>  <strong>5</strong>-ге көтеріледі.</td>
+</tr>
+<tr>
+<td><code>i = 5</code> <code>n = 5</code></td>
+<td><code>True</code></td>
+<td><code>5</code> басылады. <code>i</code>  <strong>6</strong>-ге көтеріледі.</td>
+</tr>
+<tr>
+<td><code>i = 6</code> <code>n = 5</code></td>
+<td><code>False</code></td>
+<td>Цикл аяқталады.</td>
+</tr>
+</tbody>
+</table><h3 id="мысал-2-python-while-циклі">Мысал 2: Python while Циклі</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># пайдаланушы нолды енгізгенге дейін сандарды қосу программасы</span>
+
+total <span class="token operator">=</span> <span class="token number">0</span>
+
+number <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Сан енгізіңіз: '</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># сан нол болатынша сандарды қосу</span>
+<span class="token keyword">while</span> number <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    total <span class="token operator">+=</span> number    <span class="token comment"># total = total + number</span>
+    
+    <span class="token comment"># жаңа бүтін санды енгізу</span>
+    number <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Сан енгізіңіз: '</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'жалпы ='</span><span class="token punctuation">,</span> total<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Сан енгізіңіз: 12
+Сан енгізіңіз: 4
+Сан енгізіңіз: -5
+Сан енгізіңіз: 0
+жалпы = 11
+</code></pre>
+<p>Жоғарыдағы мысалда,  <code>while</code>  пайдаланушы нолды енгізгенге дейін жатататындай жұмыс істейді. Пайдаланушы нолды енгізгенде, тексеру шарты  <code>False</code>  болады және цикл аяқталады.</p>
+<h2 id="python-тағы-шексіз-while-циклі">Python-тағы Шексіз while Циклі</h2>
+<p>Егер циклдің  <code>condition</code>  шарты әрдайым  <code>True</code> болса, цикл анық жататай (жады толтырылғанша) жұмыс істейді. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python">жас <span class="token operator">=</span> <span class="token number">32</span>
+
+<span class="token comment"># тест шарты әрдайым True</span>
+<span class="token keyword">while</span> age <span class="token operator">&gt;</span> <span class="token number">18</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Сізге тауар беріледі'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Жоғарыдағы мысалда  <code>condition</code>  әрдайым  <code>True</code> болады. Сондықтан, цикл бөлігінің коды шексіз рет жұмыс істейді.</p>
+<h2 id="python-while-циклімен-else">Python While циклімен else</h2>
+<p>Python-да  <code>while</code>  циклі қосымша  <code>else</code>  блогы бола алады.</p>
+<p>Мұнда, циклдің шарты  <code>False</code> болған кейін  <code>else</code>  блогы орындалады.</p>
+<pre class=" language-python"><code class="prism  language-python">counter <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">while</span> counter <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Цикл іші'</span><span class="token punctuation">)</span>
+    counter <span class="token operator">=</span> counter <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Егер іші'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<p>Цикл іші<br>
+Цикл іші<br>
+Цикл іші<br>
+Егер іші</p>
+<p><strong>Ескертпе</strong>: Цикл  <a href="https://www.programiz.com/python-programming/break-continue">break</a> операторы арқылы тоқтатылса,  <code>else</code> блогы орындалмайды.</p>
+<pre class=" language-python"><code class="prism  language-python">counter <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">while</span> counter <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
+    <span class="token comment"># циклді тоқтату арқылы аяқталады</span>
+    <span class="token comment"># else блогы орындалмайды</span>
+    <span class="token keyword">if</span> counter <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Цикл іші'</span><span class="token punctuation">)</span>
+    counter <span class="token operator">=</span> counter <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Егер іші'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>Цикл іші
+
+Егер іші
+</code></pre>
+<h2 id="python-for-және-while-циктары">Python for Және while циктары</h2>
+<p><code>for</code>  циклі дайындау саны  <strong>белгілі</strong> болған кезде пайдаланылады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># бұл цикл 4 рет жатататындай іске асырылады (0-ден 3-ке дейін)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<p><code>while</code>  циклі дайындау саны  <strong>белгісіз</strong> болған кезде пайдаланылады. Мысалы,</p>
+<pre><code>while condition:
+    # шарт  False болған мезгілге дейін кодты іске асырылады
+</code></pre>
+
+    </div>
+  </div>
+</body>
+
+</html>
