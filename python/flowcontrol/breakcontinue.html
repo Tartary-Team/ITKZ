@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rust</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#python-break-және-continue">Python break және continue</a>
+<ul>
+<li><a href="#python-break-операторы">Python break операторы</a></li>
+<li><a href="#python-break-операторының-жұмысы">Python break операторының жұмысы</a></li>
+<li><a href="#python-break-операторымен-for-циклі">Python break операторымен for Циклі</a></li>
+<li><a href="#python-break-операторымен-while-циклі">Python break операторымен while Циклі</a></li>
+<li><a href="#python-continue-операторы">Python continue операторы</a></li>
+<li><a href="#python-continue-операторының-жұмысы">Python continue операторының жұмысы</a></li>
+<li><a href="#python-continue-операторымен-for-циклі">Python continue операторымен for Циклі</a></li>
+<li><a href="#python-continue-операторымен-while-циклі">Python continue операторымен while Циклі</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="python-break-және-continue">Python break және continue</h1>
+<h2 id="python-break-операторы">Python break операторы</h2>
+<p><code>break</code> операторы циклді тез аяқтау үшін пайдаланылады, оны көрсетілген уақытта циклді толығымен тоқтату үшін.</p>
+<p><code>break</code> операторының синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">break</span>
+</code></pre>
+<h2 id="python-break-операторының-жұмысы">Python break операторының жұмысы</h2>
+<p><img src="working-break-statement-python.png" alt=""></p>
+<p><code>break</code> операторының <a href="https://www.programiz.com/python-programming/for-loop">for циклі</a> мен <a href="https://www.programiz.com/python-programming/while-loop">while циклі</a> ішінде жұмысы жаталады.</p>
+<h2 id="python-break-операторымен-for-циклі">Python break операторымен for Циклі</h2>
+<p>Біз  <code>for</code>  циклімен  <code>break</code>  операторын пайдалану арқылы циклді белгілі шартты орындау кезінде тоқтатуға болады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>0
+1
+2
+</code></pre>
+<p>Жоғарыдағы мысалда,  <code>for</code>  цикліні пайдалану арқылы  <code>i</code>  мәнін басып шығарамыз.  <code>break</code>  операторын пайдалануны көріңіз,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+    <span class="token keyword">break</span>
+</code></pre>
+<p>Мұнда,  <code>i</code>   <strong>3</strong>-ге тең болса,  <code>break</code>  операторы циклді тоқтатады. Сондықтан, шығарманың ішінде  <strong>2</strong>-ден кейінгі мәндер жатататылмайды.</p>
+<blockquote>
+<p><strong>Ескертпе</strong>:  <code>break</code>  операторы ескертпе жасау операторларымен әрекет етеді.</p>
+</blockquote>
+<h2 id="python-break-операторымен-while-циклі">Python break операторымен while Циклі</h2>
+<p><code>break</code> операторын пайдалану арқылы біз  <code>while</code>  цикліні тоқтатуға болады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># 6-ның бірінші 5 бөлшегін табу программасы</span>
+
+i <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token keyword">while</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'6 * '</span><span class="token punctuation">,</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'='</span><span class="token punctuation">,</span><span class="token number">6</span> <span class="token operator">*</span> i<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> i <span class="token operator">&gt;=</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+    
+    i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>6 *  1 = 6
+6 *  2 = 12
+6 *  3 = 18
+6 *  4 = 24
+6 *  5 = 30
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  <strong>6</strong>-ның бірінші  <strong>5</strong> бөлшегін табу үшін  <code>while</code>  цикліні пайдаланбыз. Мұнда</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> i <span class="token operator">&gt;=</span> <span class="token number">5</span><span class="token punctuation">:</span>
+    <span class="token keyword">break</span>
+</code></pre>
+<p>деген жердегі ретте,  <code>i</code>  <strong>5</strong>-тен көбі болса,  <code>while</code>  циклі тоқтайды.</p>
+<h2 id="python-continue-операторы">Python continue операторы</h2>
+<p><code>continue</code> операторы текущую итерацияны өткізіп, программаның бағдарлама ағымдағы итерацияға өту үшін пайдаланылады.</p>
+<p><code>continue</code> операторының синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">continue</span>
+</code></pre>
+<h2 id="python-continue-операторының-жұмысы">Python continue операторының жұмысы</h2>
+<p><img src="working-continue-statement-python.png" alt=""></p>
+<p><code>continue</code> операторының <a href="https://www.programiz.com/python-programming/for-loop">for циклі</a> мен <a href="https://www.programiz.com/python-programming/while-loop">while циклі</a> ішінде жұмысы жаталады.</p>
+<h2 id="python-continue-операторымен-for-циклі">Python continue операторымен for Циклі</h2>
+<p>Біз  <code>continue</code>  операторын  <code>for</code>  циклімен пайдалану арқылы циклдің ағымдағы итерациясын өткізу үшін пайдалана аламыз. Содан кейін программаның бағдарламасы келесі итерацияға өтеді. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>0
+1
+2
+4
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  <code>for</code>  цикліні пайдалану арқылы  <code>i</code>  мәнін басып шығарамыз.  <code>continue</code>  операторын пайдалануны көріңіз,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+    <span class="token keyword">continue</span>
+</code></pre>
+<p>Мұнда,  <code>i</code>   <strong>3</strong>-ге тең болса,  <code>continue</code>  операторы іске асырылады. Сондықтан,  <strong>3</strong>  мәні шығарманыңызға енгізілмейді.</p>
+<h2 id="python-continue-операторымен-while-циклі">Python continue операторымен while Циклі</h2>
+<p>Python-да біз  <code>continue</code>  операторын пайдалану арқылы  <code>while</code>  циклінің ағымдағы итерациясын өткізе аламыз. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># 1-ден 10-ге дейін жасалатын сандарды шығару программасы</span>
+
+num <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">while</span> num <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    num <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Шығармашылық</strong></p>
+<pre><code>1
+3
+5
+7
+9
+</code></pre>
+<p>Жоғарыдағы мысалда, біз  <strong>1</strong> -ден  <strong>10</strong> -ге дейін жасалатын сандарды шығару үшін  <code>while</code>  цикліні пайдаланбыз.  <code>continue</code>  операторын пайдалануны көріңіз,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">continue</span>
+</code></pre>
+<p>Мұнда, сан жуғырымды болмаса,  <code>continue</code>  операторы ағымдағы итерацияны өткізіп, келесі итерацияны бастайды.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
