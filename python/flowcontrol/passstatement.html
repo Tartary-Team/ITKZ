@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rust</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li><a href="#python-pass-операторы">Python pass операторы</a></li>
+<li><a href="#pass-операторын-шартты-оператормен-пайдалану">pass операторын шартты оператормен пайдалану</a></li>
+<li><a href="#pass-операторын-функция-немесе-клас-ішінде-пайдалану">pass операторын функция немесе клас ішінде пайдалану</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h2 id="python-pass-операторы">Python pass операторы</h2>
+<p>Python программалауында  <code>pass</code>  операторы - бұл келесі код үшін толтырылма көлемінде пайдалануға болатын бос оператор.</p>
+<p>Мысалы, бізде өзгеше кодты реализациялау үшін жасалатын цикл немесе функция болса, бірақ біз оны келесіде реализациялау көмек көрміз көмекші көлемі ретінде  <code>pass</code>  операторын пайдалана аламыз.</p>
+<p><code>pass</code> операторынің синтаксисі:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">pass</span>
+</code></pre>
+<h2 id="pass-операторын-шартты-оператормен-пайдалану">pass операторын шартты оператормен пайдалану</h2>
+<pre class=" language-python"><code class="prism  language-python">n <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token comment"># шартты оператор ішінде pass пайдалану</span>
+<span class="token keyword">if</span> n <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мысалда,  <code>if</code>  операторы ішінде  <code>pass</code>  операторын пайдаланғанымызды көріңіз.</p>
+<p>Бірақ  <code>pass</code>  іске асырылғанда ештеңе орындалмайды. Бұл нәтиже бермейді (NOP).</p>
+<p>Егер біз  <code>pass</code>  пайдаланбаймыз немесе тек комментарий жазсақ болса:</p>
+<pre class=" language-python"><code class="prism  language-python">n <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">if</span> n <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    <span class="token comment"># кейінгіде код жазу</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Мысалда, бізге  <code>IndentationError: expected an indented block</code> деген қате хабар бар боларымыз.</p>
+<blockquote>
+<p><strong>Ескерту</strong>: Python-да  <a href="https://www.programiz.com/python-programming/statement-indentation-comments">комментарий</a>  және  <code>pass</code>  операторының ара қайырмасы болатын арасында бір қайырмасы болған соң, интерпретатор комментарийді толық бас тартатады, ал  <code>pass</code>  өтілмейді.</p>
+</blockquote>
+<h2 id="pass-операторын-функция-немесе-клас-ішінде-пайдалану">pass операторын функция немесе клас ішінде пайдалану</h2>
+<p>Біз адамдай  <a href="https://www.programiz.com/python-programming/function">функцияны</a>  немесе  <a href="https://www.programiz.com/python-programming/class">класты</a>  бос көлемді  <code>pass</code>  операторынан көмекші көлем жасауға болады. Мысалы,</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> функция<span class="token punctuation">(</span>аргументтер<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> Мысал<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+
+    </div>
+  </div>
+</body>
+
+</html>
